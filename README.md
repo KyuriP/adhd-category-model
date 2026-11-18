@@ -19,7 +19,7 @@ FAST=1 ./reproduce.sh     # reuse the saved fits, redo the rest
 python -m unittest discover -s tests
 ```
 
-Scripts run from `src/` and write to `results/`. `paper/make_figs.py` and `paper/make_supp.py` turn the results into `figs.tex`, `figs2.tex` and `supp.tex`; compile `paper/main.tex` with `latexmk -pdf`.
+Scripts run from `src/` and write to `results/`. `paper/make_figs.py` and `paper/make_supp.py` turn the results into `figures.tex` and `supp.tex`; compile `paper/main.tex` with `latexmk -pdf`.
 
 ## What's where
 

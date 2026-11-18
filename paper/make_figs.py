@@ -1,9 +1,36 @@
-"""Writes figs.tex and figs2.tex (pgfplots) from ../results/*.json.
+"""Writes figures.tex (all figures, pgfplots/TikZ) from ../results/*.json.
 Colours: blue = model / hubs, orange = alternative / strict, grey = baseline.
 """
 import json
 import numpy as np
 from scipy.stats import norm
+
+# Fig 1 is hand-drawn
+CONCEPT = r'''\newcommand{\figconcept}{%
+\begin{tikzpicture}[font=\sffamily\scriptsize,>=stealth]
+\node[anchor=west,font=\sffamily\footnotesize] at (0,4.75) {\textbf{Partial copying.} Each reader combines the explanation with their own initial view.};
+\node[draw,fill=gray!15,minimum width=1.3cm,minimum height=0.7cm] (p0) at (1.1,3.7) {criteria};
+\foreach \i/\x/\w/\l in {0/1.1/0.10/5,1/3.6/0.31/15,2/6.1/0.39/19,3/8.6/0.42/21,4/11.1/0.43/21,5/13.6/0.43/21} {
+  \fill[cA!60] (\x-0.8,2.75) rectangle (\x-0.8+1.6*\w,3.0);
+  \draw[gray] (\x-0.8,2.75) rectangle (\x+0.8,3.0);
+  \node at (\x,2.5) {\l\%};
+}
+\foreach \i/\x in {1/3.6,2/6.1,3/8.6,4/11.1,5/13.6} {\node[circle,draw,minimum size=0.7cm] (p\i) at (\x,3.7) {\i};}
+\foreach \a/\b in {0/1,1/2,2/3,3/4,4/5} {\draw[->,thick] (p\a) -- (p\b);}
+\node[anchor=west,text=gray] at (0.3,2.1) {bars show the share of people each reader counts as having the condition (full bar = 50\%)};
+\node[anchor=west,font=\sffamily\footnotesize] at (0,1.25) {\textbf{Repeated exchange.} The cases people discuss can encourage broader definitions.};
+\draw[->] (0.5,0) -- (14.3,0);
+\foreach \p in {0,10,20,30,40,50,60} {\draw (0.5+0.22*\p,0) -- (0.5+0.22*\p,-0.08) node[below] {\p\%};}
+\draw[thick] (1.6,0) -- (1.6,0.3) node[above] {diagnostic reference};
+\draw[thick] (4.9,0) -- (4.9,0.3) node[above] {readers' initial views};
+\draw[thick,dashed] (11.5,0) -- (11.5,0.3) node[above,align=center] {share of discussed cases\\said to have the condition, $q$};
+\draw[->,very thick,cB] (1.6,-0.85) -- (4.9,-0.85) node[midway,below,text=black] {chain model fit};
+\draw[->,very thick,cA] (4.9,-0.85) -- (8.2,-0.85);
+\draw[cA,thick,dotted] (8.2,-0.85) -- (11.5,-0.85);
+\node[below] at (8.2,-0.85) {predicted broadening};
+\draw[<-,thick,gray] (5.5,-1.75) -- (7.3,-1.75) node[right,text=black] {more connections can increase an expert's influence};
+\end{tikzpicture}}
+'''
 
 R = '../results/'
 T = json.load(open(R + 'targets.json')); D = json.load(open(R + 'drift.json')); P = json.load(open(R + 'profile_s3.json'))
@@ -155,7 +182,7 @@ for pl, off, colr in (('hubs', -0.21, 'cA'), ('random', 0.21, 'black!60')):
 o.append(lab(4.65, 32, 'experts at hubs', 'cA') + lab(4.65, 28.6, 'experts at random', 'black!70') + lab(4.65, 100 * LC['none'], 'no experts', 'black!55') + f'\\node[font=\\sffamily\\tiny,text=black!55,anchor=west] at (axis cs:4.62,6.5) {{share of lay agents}};\n')
 o.append('\\end{axis}\n\\end{tikzpicture}}\n')
 
-open('figs.tex', 'w').write(''.join(o))
+part1 = ''.join(o)
 
 # robustness figure and supplementary figures
 S = RB['sens']; none = np.array(S['none']); rnd = np.array(S['random']); hub = np.array(S['hubs']); qi = S['q'].index(0.5); li = S['lam'].index(0.1)
@@ -206,5 +233,6 @@ o.append('\\end{axis}\n\\end{tikzpicture}}\n\n')
 e = [r['eta'] for r in P]; L = np.array([r['loss'] for r in P]); L = L - L.min()
 o.append('\\newcommand{\\figprofile}{%\n\\begin{tikzpicture}[font=\\sffamily\\footnotesize]\n\\begin{axis}[pub,width=7cm,height=5.2cm,xlabel={Learning rate $\\eta$},ylabel={Loss above the best fit},ymin=0,ymax=70,xmin=-0.02,xmax=0.83]\n'
          + f'\\addplot[cA,mark=*,mark size=1.3pt] coordinates {{{co(e, L)}}};\n' + '\\end{axis}\n\\end{tikzpicture}}\n')
-open('figs2.tex', 'w').write(''.join(o).replace('ymax=70', f'ymax={max(10, float(L.max()) * 1.15):.2f}'))
-print('figs', len(open('figs.tex').read()), 'figs2', len(open('figs2.tex').read()))
+part2 = ''.join(o).replace('ymax=70', f'ymax={max(10, float(L.max()) * 1.15):.2f}')
+open('figures.tex', 'w').write(part1 + part2 + CONCEPT)
+print('figures.tex', len(part1 + part2 + CONCEPT))

@@ -23,7 +23,7 @@ o.append('\\newcommand{\\figpred}{%\n\\begin{tikzpicture}\n\\begin{axis}[width=6
 o.append('\\addplot[only marks,mark=o,mark size=1.4pt,cC] coordinates {'+' '.join(f'({r["closed"]:.3g},{r["sim"]:.3g})' for r in rows)+'};\n')
 o.append('\\addplot[only marks,mark=*,mark size=1.4pt,cA] coordinates {'+' '.join(f'({r["pair"]:.3g},{r["sim"]:.3g})' for r in rows)+'};\n')
 o.append('\\addplot[gray,dashed,domain=-0.12:0.12,samples=2] {x};\n\\legend{Closed form,Pair-integrated,Equality}\n\\end{axis}\n\\end{tikzpicture}}\n')
-# figs2.tex is written by make_figs.py
+# figures come from make_figs.py
 
 L=lambda ds,v: json.load(open(f'{R}fit_s{ds}_{v}_lag.json'))
 t=['\\clearpage\n\\appendix\n\\renewcommand{\\thetable}{S\\arabic{table}}\\renewcommand{\\thefigure}{S\\arabic{figure}}\\setcounter{table}{0}\\setcounter{figure}{0}\n\\section*{Supplementary Information}\n\n']
