@@ -1,0 +1,1962 @@
+[
+ {
+  "generated_by": "partial",
+  "rep": 1,
+  "fit_with": "partial",
+  "loss": 20.302735817510158,
+  "est": {
+   "mu_b": 0.8220140083283825,
+   "s_b": 0.2158452598126558,
+   "eta": 0.3156063061788646,
+   "sig_p": 1.1853707672888418,
+   "v": 0.42529839529526825,
+   "sig_r": 0.8325981741096042,
+   "c_s": -0.41369999156840165
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    21.673914415193995,
+    22.94847761493282,
+    21.342525877389125
+   ],
+   "mean_loss": 21.98830596917198
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5001,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 0,
+  "fit_with": "partial",
+  "loss": 17.435551000115737,
+  "est": {
+   "mu_b": 0.8375584731861512,
+   "s_b": 0.2676692793786437,
+   "eta": 0.3826723138685739,
+   "sig_p": 1.1085101664394679,
+   "v": 0.5041230826777057,
+   "sig_r": 0.5360230512402492,
+   "c_s": -0.2222952711071725
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    17.864870097693196,
+    18.227552257075534,
+    18.998597801361882
+   ],
+   "mean_loss": 18.36367338537687
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5000,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 0,
+  "fit_with": "lineage_free",
+  "loss": 45.128007513293014,
+  "est": {
+   "mu_b": 0.6406766294870776,
+   "s_b": 0.5340880314171955,
+   "eta": 0.47274374280246606,
+   "sig_p": 1.0510490667327097,
+   "v": 0.14825113277643265,
+   "sig_r": 2.5570788602272834,
+   "c_s": -1.7246735038228018,
+   "b_lay": 1.0172687460958763
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    45.08408610981299,
+    47.019353013154074,
+    45.201048794135865
+   ],
+   "mean_loss": 45.76816263903431
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5000,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 2,
+  "fit_with": "partial",
+  "loss": 29.790711496962754,
+  "est": {
+   "mu_b": 0.8391119060257628,
+   "s_b": 0.31119158801202773,
+   "eta": 0.3378195230538441,
+   "sig_p": 1.1271175164596696,
+   "v": 0.49239534068975965,
+   "sig_r": 0.4252156710230963,
+   "c_s": -0.22608401185409055
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    29.7141085186888,
+    31.366814075031268,
+    30.319474696570804
+   ],
+   "mean_loss": 30.466799096763623
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5002,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 1,
+  "fit_with": "lineage_free",
+  "loss": 29.190662817891592,
+  "est": {
+   "mu_b": -0.7098573681226208,
+   "s_b": 1.2787891469112573,
+   "eta": 0.549825702049736,
+   "sig_p": 1.0854572097461115,
+   "v": 0.3825215247762397,
+   "sig_r": 0.9170149730390084,
+   "c_s": -0.4276212418145712,
+   "b_lay": 1.2857598537582189
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    29.16471274298511,
+    31.91743764098171,
+    29.212593734312716
+   ],
+   "mean_loss": 30.09824803942651
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5001,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 2,
+  "fit_with": "lineage_free",
+  "loss": 46.486737327732094,
+  "est": {
+   "mu_b": -0.46612443721908603,
+   "s_b": 1.2101418199519567,
+   "eta": 0.5142156644334483,
+   "sig_p": 1.0360647431507166,
+   "v": 0.510125500622387,
+   "sig_r": 0.17451932271242376,
+   "c_s": -0.18987329438236444,
+   "b_lay": 1.2651328680826293
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    44.55708491616923,
+    46.51953879697617,
+    44.03948516424611
+   ],
+   "mean_loss": 45.03870295913051
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5002,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 3,
+  "fit_with": "partial",
+  "loss": 20.652925304886807,
+  "est": {
+   "mu_b": 0.8041085680011373,
+   "s_b": 0.2702422029472854,
+   "eta": 0.414962082062943,
+   "sig_p": 1.1147183718788716,
+   "v": 0.4532829728977663,
+   "sig_r": 0.668864727356071,
+   "c_s": -0.29722792662681463
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    19.22522376505917,
+    22.305129060876595,
+    20.848512543891676
+   ],
+   "mean_loss": 20.792955123275814
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5003,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 3,
+  "fit_with": "lineage_free",
+  "loss": 39.117028254790604,
+  "est": {
+   "mu_b": 0.7431100280907679,
+   "s_b": 0.38208631118142544,
+   "eta": 0.39563396636635073,
+   "sig_p": 1.091001204358703,
+   "v": 0.44659652022641083,
+   "sig_r": 0.6181580405298206,
+   "c_s": -0.28704687912237337,
+   "b_lay": 0.8955004718476871
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    33.62199538361058,
+    36.844367230752134,
+    34.544398457545306
+   ],
+   "mean_loss": 35.00358702396934
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5003,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 4,
+  "fit_with": "partial",
+  "loss": 29.78387022027549,
+  "est": {
+   "mu_b": 0.8577935923205877,
+   "s_b": 0.43510671946383983,
+   "eta": 0.28795821454522846,
+   "sig_p": 1.127061117731201,
+   "v": 0.4571457069366285,
+   "sig_r": 0.7224631117720544,
+   "c_s": -0.38403489931333024
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    27.84718796181691,
+    28.51550781474246,
+    26.361312140582513
+   ],
+   "mean_loss": 27.574669305713957
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5004,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 4,
+  "fit_with": "lineage_free",
+  "loss": 47.55509356202158,
+  "est": {
+   "mu_b": -0.301585161691726,
+   "s_b": 0.9237470510351882,
+   "eta": 0.5478637830127397,
+   "sig_p": 1.1259746283043475,
+   "v": 0.45884364094349017,
+   "sig_r": 0.6357056401175651,
+   "c_s": -0.3587568837181999,
+   "b_lay": 1.267409512689309
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    48.022446835031474,
+    46.38539814885679,
+    44.8381435764276
+   ],
+   "mean_loss": 46.41532952010528
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5004,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 5,
+  "fit_with": "partial",
+  "loss": 25.006888363175655,
+  "est": {
+   "mu_b": 0.8340849485360278,
+   "s_b": 0.3715108870087874,
+   "eta": 0.19769855800281533,
+   "sig_p": 1.1441720954278713,
+   "v": 0.4923934040333471,
+   "sig_r": 0.41310083140244425,
+   "c_s": -0.2645993754832129
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    24.452863261793524,
+    26.236165873060795,
+    26.675604213042945
+   ],
+   "mean_loss": 25.788211115965755
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5005,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 5,
+  "fit_with": "lineage_free",
+  "loss": 30.520776178793003,
+  "est": {
+   "mu_b": -0.5023195250804848,
+   "s_b": 1.376763459068691,
+   "eta": 0.4970894132795388,
+   "sig_p": 1.0773850777240568,
+   "v": 0.5119738619059981,
+   "sig_r": 0.26620566576693205,
+   "c_s": -0.2875664466563118,
+   "b_lay": 1.2802197015361219
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    27.26962264857732,
+    29.084602819331156,
+    28.679223734704628
+   ],
+   "mean_loss": 28.3444830675377
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5005,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 6,
+  "fit_with": "partial",
+  "loss": 22.94529912331222,
+  "est": {
+   "mu_b": 0.8756833697242603,
+   "s_b": 0.5798027431844166,
+   "eta": 0.23827747412515637,
+   "sig_p": 1.0173122515058974,
+   "v": 0.4233992115445373,
+   "sig_r": 0.7027013692724624,
+   "c_s": -0.3577560331073323
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    27.872927696295708,
+    28.254421904622024,
+    30.359042402790685
+   ],
+   "mean_loss": 28.828797334569472
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5006,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 6,
+  "fit_with": "lineage_free",
+  "loss": 40.76866349790818,
+  "est": {
+   "mu_b": -0.3664354735150528,
+   "s_b": 1.4223218698824827,
+   "eta": 0.5805870720056518,
+   "sig_p": 1.0564289549468997,
+   "v": 0.3703973746585034,
+   "sig_r": 1.0361268255828473,
+   "c_s": -0.5666193904776131,
+   "b_lay": 1.1661594093894618
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    41.86935799215328,
+    42.98780889260246,
+    42.12137739217464
+   ],
+   "mean_loss": 42.32618142564346
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5006,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 7,
+  "fit_with": "partial",
+  "loss": 21.170874681513283,
+  "est": {
+   "mu_b": 0.8315844168159408,
+   "s_b": 0.15846081624845465,
+   "eta": 0.5112288646588882,
+   "sig_p": 1.1994762409811892,
+   "v": 0.49046070492926974,
+   "sig_r": 0.7666764706041046,
+   "c_s": -0.3968340143188238
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    22.16425955273894,
+    24.726155062300347,
+    23.359272389340525
+   ],
+   "mean_loss": 23.41656233479327
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5007,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 7,
+  "fit_with": "lineage_free",
+  "loss": 31.157868110927545,
+  "est": {
+   "mu_b": -0.9780888217465395,
+   "s_b": 1.8135801873373278,
+   "eta": 0.6560033982995965,
+   "sig_p": 1.091610500069059,
+   "v": 0.1056393774984361,
+   "sig_r": 2.7688335296320066,
+   "c_s": -1.996676924873463,
+   "b_lay": 1.1663999348449714
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    31.326827297596402,
+    34.47480035877561,
+    31.886348288595286
+   ],
+   "mean_loss": 32.56265864832243
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5007,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 8,
+  "fit_with": "partial",
+  "loss": 31.081130940330986,
+  "est": {
+   "mu_b": 0.80982134489913,
+   "s_b": 0.1985247244881474,
+   "eta": 0.31548976626148767,
+   "sig_p": 1.1735228096690697,
+   "v": 0.39964962387800695,
+   "sig_r": 0.9619492786739813,
+   "c_s": -0.562400932335246
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    32.272477466597735,
+    33.17720208313814,
+    29.82555205628275
+   ],
+   "mean_loss": 31.75841053533954
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5008,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 8,
+  "fit_with": "lineage_free",
+  "loss": 39.59814654704934,
+  "est": {
+   "mu_b": -0.979360743771361,
+   "s_b": 0.17906189524846572,
+   "eta": 0.5428821821069846,
+   "sig_p": 1.0938141206782774,
+   "v": 0.07016442664087785,
+   "sig_r": 2.4110682625312148,
+   "c_s": -1.7916898147566496,
+   "b_lay": 1.369604993550451
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    46.53924554974769,
+    47.80152913265352,
+    43.07658329508628
+   ],
+   "mean_loss": 45.80578599249583
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5008,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 9,
+  "fit_with": "partial",
+  "loss": 15.883548241761817,
+  "est": {
+   "mu_b": 0.8060802417243218,
+   "s_b": 0.046727098772793574,
+   "eta": 0.30649159730292697,
+   "sig_p": 1.1772703342070048,
+   "v": 0.5388232514096318,
+   "sig_r": 0.34161352531413436,
+   "c_s": -0.2039431871075953
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    21.630799683062133,
+    21.86132255476061,
+    21.254593038531908
+   ],
+   "mean_loss": 21.58223842545155
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5009,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "partial",
+  "rep": 9,
+  "fit_with": "lineage_free",
+  "loss": 20.079383409735062,
+  "est": {
+   "mu_b": -0.7617334820224353,
+   "s_b": 0.5335358099303752,
+   "eta": 0.587905043847121,
+   "sig_p": 1.091938279070389,
+   "v": 0.4970763169116701,
+   "sig_r": 0.41095499861580564,
+   "c_s": -0.2285697307609812,
+   "b_lay": 1.280999740705877
+  },
+  "true": {
+   "mu_b": 0.833148246257521,
+   "s_b": 0.27747901275955955,
+   "eta": 0.30562663781742655,
+   "sig_p": 1.1462421330620578,
+   "v": 0.5026363441125699,
+   "sig_r": 0.4873624206621956,
+   "c_s": -0.2664526163392492
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    23.83234668724129,
+    24.441173452066696,
+    25.070913395493616
+   ],
+   "mean_loss": 24.448144511600535
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5009,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 0,
+  "fit_with": "partial",
+  "loss": 21.69497722982454,
+  "est": {
+   "mu_b": 0.8320048746284863,
+   "s_b": 0.02110470978582446,
+   "eta": 0.3081049717759614,
+   "sig_p": 1.148927361010157,
+   "v": 0.5286483157120057,
+   "sig_r": 0.4986286769446815,
+   "c_s": -0.20716934600892234
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    21.85280033540771,
+    20.447770426556072,
+    22.454374008873508
+   ],
+   "mean_loss": 21.584981590279096
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5000,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 0,
+  "fit_with": "lineage_free",
+  "loss": 17.903182905721508,
+  "est": {
+   "mu_b": -0.5743250535323674,
+   "s_b": 0.13850623587089572,
+   "eta": 0.5675129646598789,
+   "sig_p": 1.0838824976110897,
+   "v": 0.5135788902516474,
+   "sig_r": 0.49576673397937476,
+   "c_s": -0.2366135212215673,
+   "b_lay": 1.363218161840544
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    18.83382450693742,
+    18.457044936973432,
+    19.1167329883866
+   ],
+   "mean_loss": 18.802534144099152
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5000,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 1,
+  "fit_with": "partial",
+  "loss": 24.458167158715874,
+  "est": {
+   "mu_b": 0.804809844811637,
+   "s_b": 0.011903920861540018,
+   "eta": 0.24288435743398884,
+   "sig_p": 1.208253627135317,
+   "v": 0.49893939415117106,
+   "sig_r": 0.5651290046623509,
+   "c_s": -0.29424016397804664
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    28.012467926134594,
+    28.32594117200055,
+    28.580671794146784
+   ],
+   "mean_loss": 28.306360297427307
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5001,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 1,
+  "fit_with": "lineage_free",
+  "loss": 24.359194944595444,
+  "est": {
+   "mu_b": 0.16106577524890486,
+   "s_b": 1.215684478533688,
+   "eta": 0.3320388709244958,
+   "sig_p": 0.918710874241485,
+   "v": 0.45118175589288545,
+   "sig_r": 0.4714535816905461,
+   "c_s": -0.39189916757323795,
+   "b_lay": 1.301798076416648
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    27.503374820268668,
+    29.76418354364072,
+    27.66108527948469
+   ],
+   "mean_loss": 28.309547881131362
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5001,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 2,
+  "fit_with": "partial",
+  "loss": 30.32435793314093,
+  "est": {
+   "mu_b": 0.8053173929854358,
+   "s_b": 0.10912384790679197,
+   "eta": 0.24499792478060334,
+   "sig_p": 1.202854369913585,
+   "v": 0.5316734558557616,
+   "sig_r": 0.3004904727140789,
+   "c_s": -0.21947184989684165
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    25.22378536242202,
+    25.166823695305894,
+    25.458594425348284
+   ],
+   "mean_loss": 25.283067827692065
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5002,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 2,
+  "fit_with": "lineage_free",
+  "loss": 33.11133344264752,
+  "est": {
+   "mu_b": -0.10575036590609521,
+   "s_b": 0.7760327771881624,
+   "eta": 0.463609341049674,
+   "sig_p": 1.1143141385116146,
+   "v": 0.5067268120116886,
+   "sig_r": 0.247852444736955,
+   "c_s": -0.22400578806869398,
+   "b_lay": 1.3203573935497306
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    28.328543857979238,
+    28.839530731621007,
+    28.503428285147688
+   ],
+   "mean_loss": 28.557167624915976
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5002,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 3,
+  "fit_with": "partial",
+  "loss": 16.46583076593492,
+  "est": {
+   "mu_b": 0.7621026129669686,
+   "s_b": 0.08830234198671216,
+   "eta": 0.42846508145325135,
+   "sig_p": 1.1400226967465712,
+   "v": 0.468306798223723,
+   "sig_r": 0.6388931593302418,
+   "c_s": -0.3289174105047237
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    21.93313373226217,
+    22.07152887859304,
+    21.932925100284983
+   ],
+   "mean_loss": 21.9791959037134
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5003,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 3,
+  "fit_with": "lineage_free",
+  "loss": 24.703776589223995,
+  "est": {
+   "mu_b": 0.6466181634792663,
+   "s_b": 0.048392512184593506,
+   "eta": 0.5144358111412928,
+   "sig_p": 1.1405376501376965,
+   "v": 0.4583497287753806,
+   "sig_r": 0.6955955132981955,
+   "c_s": -0.37823689760198775,
+   "b_lay": 1.0203726544419576
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    25.760414565849118,
+    26.566429466971147,
+    24.823548234912575
+   ],
+   "mean_loss": 25.716797422577613
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5003,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 4,
+  "fit_with": "partial",
+  "loss": 36.75074317219895,
+  "est": {
+   "mu_b": 0.8298000276695485,
+   "s_b": 0.17718142874235632,
+   "eta": 0.41197087813984473,
+   "sig_p": 1.19292545513634,
+   "v": 0.030408958201334713,
+   "sig_r": 2.7277412733386908,
+   "c_s": -2.0228269237546126
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    39.879274128420455,
+    38.43988407468996,
+    37.815652189366936
+   ],
+   "mean_loss": 38.71160346415912
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5004,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 4,
+  "fit_with": "lineage_free",
+  "loss": 32.90145469861084,
+  "est": {
+   "mu_b": 0.16000298759503595,
+   "s_b": 0.32690102839431545,
+   "eta": 0.5756976189772915,
+   "sig_p": 1.1448196644370792,
+   "v": 0.4402154730707579,
+   "sig_r": 0.762704438816918,
+   "c_s": -0.3931220875148045,
+   "b_lay": 1.2788253119739967
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    33.67248842246475,
+    32.16505457509055,
+    32.17136708208294
+   ],
+   "mean_loss": 32.669636693212745
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5004,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 5,
+  "fit_with": "partial",
+  "loss": 23.9938520064957,
+  "est": {
+   "mu_b": 0.8156788782754831,
+   "s_b": 0.06129694038979827,
+   "eta": 0.21981659055028313,
+   "sig_p": 1.246962714466469,
+   "v": 0.5348039945900818,
+   "sig_r": 0.36586264285406345,
+   "c_s": -0.21714840955768822
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    21.217391977148086,
+    22.5312686912827,
+    25.03940213464645
+   ],
+   "mean_loss": 22.929354267692414
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5005,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 5,
+  "fit_with": "lineage_free",
+  "loss": 33.45643005136783,
+  "est": {
+   "mu_b": 0.8556406020694796,
+   "s_b": 0.19852786014389012,
+   "eta": 0.21898358048206923,
+   "sig_p": 1.241833691917958,
+   "v": 0.17172550086827854,
+   "sig_r": 1.9372265854165984,
+   "c_s": -1.2777924343923015,
+   "b_lay": 0.6472382478747798
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    33.77202752361026,
+    35.3277530871558,
+    36.90592544514278
+   ],
+   "mean_loss": 35.33523535196961
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5005,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 6,
+  "fit_with": "partial",
+  "loss": 24.632319259125268,
+  "est": {
+   "mu_b": 0.8164320450411628,
+   "s_b": 0.011642674293576127,
+   "eta": 0.441570669994464,
+   "sig_p": 1.1695663264051817,
+   "v": 0.4583226914264713,
+   "sig_r": 0.8178575129768079,
+   "c_s": -0.3952535930398974
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    24.841695977377658,
+    25.813662251203066,
+    27.078927295713207
+   ],
+   "mean_loss": 25.91142850809798
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5006,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 6,
+  "fit_with": "lineage_free",
+  "loss": 19.832859606593097,
+  "est": {
+   "mu_b": 0.6692246195304019,
+   "s_b": 0.518629506739062,
+   "eta": 0.44053660897070895,
+   "sig_p": 1.0775581957190592,
+   "v": 0.43748773907316996,
+   "sig_r": 0.7431999322272032,
+   "c_s": -0.3697402515622076,
+   "b_lay": 1.0366907314130955
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    18.966958436191845,
+    20.023266422112197,
+    21.07491333463602
+   ],
+   "mean_loss": 20.021712730980024
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5006,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 7,
+  "fit_with": "partial",
+  "loss": 27.182259189676344,
+  "est": {
+   "mu_b": 0.8117712099120906,
+   "s_b": 0.0900962858297133,
+   "eta": 0.43199661906808023,
+   "sig_p": 1.204880001735416,
+   "v": 0.5351815485628002,
+   "sig_r": 0.589288022346105,
+   "c_s": -0.3306971770665902
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    29.236796487542577,
+    31.060352108453056,
+    30.06089576271933
+   ],
+   "mean_loss": 30.119348119571654
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5007,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 7,
+  "fit_with": "lineage_free",
+  "loss": 29.505232845655186,
+  "est": {
+   "mu_b": 0.35947301246007024,
+   "s_b": 1.5015153152039677,
+   "eta": 0.3704301927500156,
+   "sig_p": 0.8933714406052241,
+   "v": 0.5025505087395461,
+   "sig_r": 0.6485900196271536,
+   "c_s": -0.4767024973293231,
+   "b_lay": 1.099441325022037
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    27.28188096600383,
+    30.077121971481393,
+    27.84769313439989
+   ],
+   "mean_loss": 28.402232023961705
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5007,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 8,
+  "fit_with": "partial",
+  "loss": 17.39389035241844,
+  "est": {
+   "mu_b": 0.790340265081962,
+   "s_b": 0.013417110359483675,
+   "eta": 0.23690790654211624,
+   "sig_p": 1.198595800500312,
+   "v": 0.5246280636405103,
+   "sig_r": 0.32095839654402836,
+   "c_s": -0.19094815904536522
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    21.136665934809493,
+    22.63633639728486,
+    21.901690961434678
+   ],
+   "mean_loss": 21.891564431176345
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5008,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 8,
+  "fit_with": "lineage_free",
+  "loss": 23.0705456536153,
+  "est": {
+   "mu_b": -0.8777601857370176,
+   "s_b": 1.3818074651324883,
+   "eta": 0.5402882120828519,
+   "sig_p": 1.090015080435441,
+   "v": 0.46183655816462177,
+   "sig_r": 0.5206514054118361,
+   "c_s": -0.3550074544607905,
+   "b_lay": 1.2625931943140327
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    25.94820950660341,
+    27.087022180614962,
+    25.12630214823289
+   ],
+   "mean_loss": 26.053844611817087
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5008,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 9,
+  "fit_with": "partial",
+  "loss": 26.219750746848003,
+  "est": {
+   "mu_b": 0.8272788332509025,
+   "s_b": 0.027153408926763545,
+   "eta": 0.18658343848766162,
+   "sig_p": 1.177076243366351,
+   "v": 0.5536363263397068,
+   "sig_r": 0.28908121092364114,
+   "c_s": -0.16325451152863502
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    32.13175489514468,
+    32.74845720434524,
+    32.15522320042664
+   ],
+   "mean_loss": 32.34514509997219
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5124,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5009,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ },
+ {
+  "generated_by": "lineage_free",
+  "rep": 9,
+  "fit_with": "lineage_free",
+  "loss": 27.962123883850936,
+  "est": {
+   "mu_b": -0.7099603566662482,
+   "s_b": 0.8924898721003938,
+   "eta": 0.5230808697070912,
+   "sig_p": 1.0444849730550594,
+   "v": 0.4869008245101176,
+   "sig_r": 0.42941161448005305,
+   "c_s": -0.2934673048861257,
+   "b_lay": 1.3621937469786891
+  },
+  "true": {
+   "mu_b": -0.9228969591774068,
+   "s_b": 0.7603979577092463,
+   "eta": 0.564426502138985,
+   "sig_p": 1.0895666319457002,
+   "v": 0.525224856365561,
+   "sig_r": 0.33452071574279607,
+   "c_s": -0.23685502043546025,
+   "b_lay": 1.3450417831924457
+  },
+  "simulation_check": {
+   "seeds": [
+    17,
+    19,
+    23
+   ],
+   "chains": 20000,
+   "losses": [
+    32.73105475763539,
+    32.627945595687,
+    32.191763787056225
+   ],
+   "mean_loss": 32.516921380126206
+  },
+  "optimizer": {
+   "converged": false,
+   "nit": 60,
+   "nfev": 5856,
+   "maxiter": 60,
+   "popsize": 12
+  },
+  "synthetic_seed": 5009,
+  "target_version": "2026-11-18-chain-bootstrap-2000",
+  "scope": "Conditional on generating parameters and the observed-data bootstrap weights; no covariate-adjustment or model-selection uncertainty."
+ }
+]

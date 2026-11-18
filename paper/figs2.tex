@@ -1,0 +1,88 @@
+\newcommand{\figrobust}{%
+\begin{tikzpicture}[font=\sffamily\footnotesize]
+\begin{axis}[pub,axis lines=box,width=6.6cm,height=6.0cm,title={\textbf{a}\hspace{0.6em}Effect of experts at hubs relative to\\the same number at random},xlabel={Positive share of examples $q$ (\%)},ylabel={Reversion rate $\lambda$},xmin=0.5,xmax=5.5,ymin=0.5,ymax=5.5,xtick={1,...,5},ytick={1,...,5},xticklabels={20,35,50,70,90},yticklabels={0.02,0.05,0.1,0.2,0.4},major tick length=0pt,colormap={seq}{color=(cA!8!white) color=(cA)},point meta min=1.5,point meta max=3.80,title style={text width=6cm}]
+\addplot[matrix plot*,mesh/cols=5,mesh/rows=5,point meta=explicit,draw=white,line width=0.8pt] coordinates {(1,1) [2.120] (2,1) [2.358] (3,1) [2.618] (4,1) [3.064] (5,1) [3.617] (1,2) [2.590] (2,2) [2.780] (3,2) [3.005] (4,2) [3.368] (5,2) [3.670] (1,3) [3.028] (2,3) [3.146] (3,3) [3.276] (4,3) [3.454] (5,3) [3.609] (1,4) [3.421] (2,4) [3.471] (3,4) [3.486] (4,4) [3.512] (5,4) [3.387] (1,5) [3.797] (2,5) [3.732] (3,5) [3.655] (4,5) [3.514] (5,5) [3.157]};
+\addplot[only marks,mark=none,point meta=explicit symbolic,nodes near coords,nodes near coords align={center},every node near coord/.append style={font=\sffamily\scriptsize,text=white,inner sep=0pt}] coordinates {(4,1) [3.1$\times$] (5,1) [3.6$\times$] (2,2) [2.8$\times$] (3,2) [3.0$\times$] (4,2) [3.4$\times$] (5,2) [3.7$\times$] (1,3) [3.0$\times$] (2,3) [3.1$\times$] (3,3) [3.3$\times$] (4,3) [3.5$\times$] (5,3) [3.6$\times$] (1,4) [3.4$\times$] (2,4) [3.5$\times$] (3,4) [3.5$\times$] (4,4) [3.5$\times$] (5,4) [3.4$\times$] (1,5) [3.8$\times$] (2,5) [3.7$\times$] (3,5) [3.7$\times$] (4,5) [3.5$\times$] (5,5) [3.2$\times$]};
+\addplot[only marks,mark=none,point meta=explicit symbolic,nodes near coords,nodes near coords align={center},every node near coord/.append style={font=\sffamily\scriptsize,text=black,inner sep=0pt}] coordinates {(1,1) [2.1$\times$] (2,1) [2.4$\times$] (3,1) [2.6$\times$] (1,2) [2.6$\times$]};
+\end{axis}
+\begin{axis}[pub,at={(8.9cm,0cm)},width=6.6cm,height=6.0cm,title={\textbf{b}\hspace{0.6em}Across network sizes and types},xlabel={Reduction in implied prevalence (points)},xmin=0,xmax=7,ymin=0.4,ymax=6.6,ytick={1,...,6},yticklabels={{modular, even degrees},{with clustering},{1{,}000 agents},{500 agents},{200 agents},{100 agents}},y axis line style={draw=none},ytick style={draw=none}]
+\draw[black!15,line width=0.4pt] (axis cs:0,2.5) -- (axis cs:7,2.5);
+\draw[black!25,line width=2.2pt] (axis cs:1.47,1) -- (axis cs:2.09,1);
+\addplot[only marks,mark=*,mark size=2.3pt,black!60,line width=0pt] coordinates {(1.47,1)};
+\addplot[only marks,mark=*,mark size=2.3pt,cA,line width=0pt] coordinates {(2.09,1)};
+\draw[black!25,line width=2.2pt] (axis cs:1.44,2) -- (axis cs:5.88,2);
+\addplot[only marks,mark=*,mark size=2.3pt,black!60,line width=0pt] coordinates {(1.44,2)};
+\addplot[only marks,mark=*,mark size=2.3pt,cA,line width=0pt] coordinates {(5.88,2)};
+\draw[black!25,line width=2.2pt] (axis cs:1.34,3) -- (axis cs:5.52,3);
+\addplot[only marks,mark=*,mark size=2.3pt,black!60,line width=0pt] coordinates {(1.34,3)};
+\addplot[only marks,mark=*,mark size=2.3pt,cA,line width=0pt] coordinates {(5.52,3)};
+\draw[black!25,line width=2.2pt] (axis cs:1.25,4) -- (axis cs:5.40,4);
+\addplot[only marks,mark=*,mark size=2.3pt,black!60,line width=0pt] coordinates {(1.25,4)};
+\addplot[only marks,mark=*,mark size=2.3pt,cA,line width=0pt] coordinates {(5.40,4)};
+\draw[black!25,line width=2.2pt] (axis cs:0.85,5) -- (axis cs:5.11,5);
+\addplot[only marks,mark=*,mark size=2.3pt,black!60,line width=0pt] coordinates {(0.85,5)};
+\addplot[only marks,mark=*,mark size=2.3pt,cA,line width=0pt] coordinates {(5.11,5)};
+\draw[black!25,line width=2.2pt] (axis cs:1.19,6) -- (axis cs:4.77,6);
+\addplot[only marks,mark=*,mark size=2.3pt,black!60,line width=0pt] coordinates {(1.19,6)};
+\addplot[only marks,mark=*,mark size=2.3pt,cA,line width=0pt] coordinates {(4.77,6)};
+\node[font=\sffamily\scriptsize,text=black!70,anchor=south,inner sep=1.5pt] at (axis cs:1.1871343934250684,6.25) {at random};
+\node[font=\sffamily\scriptsize,text=cA,anchor=south,inner sep=1.5pt] at (axis cs:4.771933372194686,6.25) {at hubs};
+\end{axis}
+\begin{axis}[pub,at={(0cm,-2.4cm)},anchor=north west,width=13.6cm,height=6.2cm,title={\textbf{c}\hspace{0.6em}Broad sources can shift boundaries further},xlabel={Shift of lay agents' boundary (standard deviations of the trait)},xmin=-0.5,xmax=0.5,ymin=0.4,ymax=6.9,ytick={1,...,6},yticklabels={{20\% positive, at random},{20\% positive, at hubs},{50\% positive, at random},{50\% positive, at hubs},{90\% positive, at random},{90\% positive, at hubs}},y axis line style={draw=none},ytick style={draw=none},xtick={-0.4,-0.2,0,0.2,0.4},xticklabels={0.4,0.2,0,0.2,0.4}]
+\draw[black!50,line width=0.5pt] (axis cs:0,0.4) -- (axis cs:0,6.5);
+\fill[cB] (axis cs:-0.054,0.7) rectangle (axis cs:0,1.3);
+\fill[cD] (axis cs:0,0.7) rectangle (axis cs:0.053,1.3);
+\draw[black!75,line width=0.5pt] (axis cs:-0.042,1) -- (axis cs:-0.065,1);
+\draw[black!75,line width=0.5pt] (axis cs:0.042,1) -- (axis cs:0.063,1);
+\node[font=\sffamily\scriptsize,anchor=west,text=black!70] at (axis cs:0.52,1) {1.0$\times$};
+\fill[cB] (axis cs:-0.206,1.7) rectangle (axis cs:0,2.3);
+\fill[cD] (axis cs:0,1.7) rectangle (axis cs:0.220,2.3);
+\draw[black!75,line width=0.5pt] (axis cs:-0.199,2) -- (axis cs:-0.214,2);
+\draw[black!75,line width=0.5pt] (axis cs:0.213,2) -- (axis cs:0.227,2);
+\node[font=\sffamily\scriptsize,anchor=west,text=black!70] at (axis cs:0.52,2) {1.1$\times$};
+\draw[black!12,line width=0.4pt] (axis cs:-0.5,2.5) -- (axis cs:0.5,2.5);
+\fill[cB] (axis cs:-0.045,2.7) rectangle (axis cs:0,3.3);
+\fill[cD] (axis cs:0,2.7) rectangle (axis cs:0.083,3.3);
+\draw[black!75,line width=0.5pt] (axis cs:-0.031,3) -- (axis cs:-0.058,3);
+\draw[black!75,line width=0.5pt] (axis cs:0.070,3) -- (axis cs:0.096,3);
+\node[font=\sffamily\scriptsize,anchor=west,text=black!70] at (axis cs:0.52,3) {1.9$\times$};
+\fill[cB] (axis cs:-0.199,3.7) rectangle (axis cs:0,4.3);
+\fill[cD] (axis cs:0,3.7) rectangle (axis cs:0.270,4.3);
+\draw[black!75,line width=0.5pt] (axis cs:-0.190,4) -- (axis cs:-0.207,4);
+\draw[black!75,line width=0.5pt] (axis cs:0.262,4) -- (axis cs:0.278,4);
+\node[font=\sffamily\scriptsize,anchor=west,text=black!70] at (axis cs:0.52,4) {1.4$\times$};
+\draw[black!12,line width=0.4pt] (axis cs:-0.5,4.5) -- (axis cs:0.5,4.5);
+\fill[cB] (axis cs:-0.025,4.7) rectangle (axis cs:0,5.3);
+\fill[cD] (axis cs:0,4.7) rectangle (axis cs:0.087,5.3);
+\draw[black!75,line width=0.5pt] (axis cs:-0.009,5) -- (axis cs:-0.040,5);
+\draw[black!75,line width=0.5pt] (axis cs:0.072,5) -- (axis cs:0.101,5);
+\node[font=\sffamily\scriptsize,anchor=west,text=black!70] at (axis cs:0.52,5) {3.5$\times$};
+\fill[cB] (axis cs:-0.122,5.7) rectangle (axis cs:0,6.3);
+\fill[cD] (axis cs:0,5.7) rectangle (axis cs:0.251,6.3);
+\draw[black!75,line width=0.5pt] (axis cs:-0.113,6) -- (axis cs:-0.130,6);
+\draw[black!75,line width=0.5pt] (axis cs:0.242,6) -- (axis cs:0.261,6);
+\node[font=\sffamily\scriptsize,anchor=west,text=black!70] at (axis cs:0.52,6) {2.1$\times$};
+\node[font=\sffamily\scriptsize,text=cB!90!black,anchor=east,inner sep=1.5pt] at (axis cs:-0.03,6.55) {$\leftarrow$ narrower with strict sources};
+\node[font=\sffamily\scriptsize,text=cD,anchor=west,inner sep=1.5pt] at (axis cs:0.03,6.55) {broader with broad sources $\rightarrow$};
+\node[font=\sffamily\scriptsize,anchor=west,text=black!55] at (axis cs:0.52,6.55) {ratio};
+\end{axis}
+\end{tikzpicture}}
+
+\newcommand{\figpred}{%
+\begin{tikzpicture}[font=\sffamily\footnotesize]
+\begin{axis}[pub,axis lines=box,width=7cm,height=7cm,xlabel={Predicted shift of mean offset},ylabel={Simulated shift of mean offset},xmin=-0.56,xmax=0.56,ymin=-0.12,ymax=0.12,scaled ticks=false,tick label style={font=\sffamily\scriptsize,/pgf/number format/fixed},clip=true]
+\addplot[black!35,dashed,domain=-0.12:0.12,samples=2,line width=0.5pt] {x};
+\addplot[only marks,mark=o,mark size=1.5pt,black!55,line width=0.4pt] coordinates {(0,0.0103) (0.0262,0.0237) (0.0706,0.0407) (0.131,0.058) (0.193,0.0705) (0.263,0.0807) (0.353,0.0896) (0.526,0.0991) (-0.0292,-0.00293) (0,0.0109) (0.0471,0.0287) (0.11,0.0472) (0.172,0.0614) (0.241,0.0731) (0.33,0.0841) (0.497,0.0962) (-0.0876,-0.0242) (-0.0525,-0.0102) (0,0.00839) (0.0657,0.0287) (0.129,0.0448) (0.197,0.0591) (0.282,0.0733) (0.438,0.0903) (-0.175,-0.0486) (-0.131,-0.0356) (-0.0706,-0.0172) (0,0.00387) (0.0644,0.0217) (0.131,0.0385) (0.212,0.0565) (0.351,0.0795) (-0.263,-0.0662) (-0.21,-0.0549) (-0.141,-0.038) (-0.0657,-0.0179) (0,-0.000153) (0.0657,0.018) (0.141,0.0382) (0.263,0.066) (-0.351,-0.0795) (-0.289,-0.0701) (-0.212,-0.0559) (-0.131,-0.0382) (-0.0644,-0.0214) (0,-0.00354) (0.0706,0.0174) (0.175,0.0483) (-0.438,-0.0902) (-0.367,-0.0836) (-0.282,-0.0728) (-0.197,-0.0587) (-0.129,-0.0443) (-0.0657,-0.0283) (0,-0.00817) (0.0876,0.0239) (-0.526,-0.0989) (-0.446,-0.0954) (-0.353,-0.089) (-0.263,-0.0798) (-0.193,-0.0698) (-0.131,-0.0576) (-0.0706,-0.0406) (0,-0.0101)};
+\addplot[only marks,mark=*,mark size=1.5pt,cA,line width=0pt] coordinates {(0.009,0.0103) (0.0221,0.0237) (0.0405,0.0407) (0.0594,0.058) (0.0737,0.0705) (0.0863,0.0807) (0.0992,0.0896) (0.114,0.0991) (-0.00464,-0.00293) (0.00969,0.0109) (0.0288,0.0287) (0.0485,0.0472) (0.0636,0.0614) (0.0775,0.0731) (0.0928,0.0841) (0.111,0.0962) (-0.0274,-0.0242) (-0.0126,-0.0102) (0.00719,0.00839) (0.0287,0.0287) (0.0464,0.0448) (0.063,0.0591) (0.0804,0.0733) (0.103,0.0903) (-0.0543,-0.0486) (-0.0394,-0.0356) (-0.0195,-0.0172) (0.00339,0.00387) (0.0232,0.0217) (0.0408,0.0385) (0.0613,0.0565) (0.0902,0.0795) (-0.0742,-0.0662) (-0.0605,-0.0549) (-0.0411,-0.038) (-0.0198,-0.0179) (0.000175,-0.000153) (0.0196,0.018) (0.041,0.0382) (0.0732,0.066) (-0.09,-0.0795) (-0.0782,-0.0701) (-0.0617,-0.0559) (-0.0415,-0.0382) (-0.0226,-0.0214) (-0.00359,-0.00354) (0.0196,0.0174) (0.0541,0.0483) (-0.103,-0.0902) (-0.0938,-0.0836) (-0.0795,-0.0728) (-0.0628,-0.0587) (-0.0464,-0.0443) (-0.0288,-0.0283) (-0.00702,-0.00817) (0.0274,0.0239) (-0.115,-0.0989) (-0.108,-0.0954) (-0.0985,-0.089) (-0.0864,-0.0798) (-0.0737,-0.0698) (-0.0594,-0.0576) (-0.0404,-0.0406) (-0.00876,-0.0101)};
+\node[font=\sffamily\scriptsize,text=cA,anchor=west,inner sep=1.5pt,align=left] at (axis cs:0.03,-0.085) {averaged over\\pairs of agents};
+\node[font=\sffamily\scriptsize,text=black!65,anchor=north west,inner sep=1.5pt] at (axis cs:0.16,0.02) {closed form};
+\node[font=\sffamily\scriptsize,text=black!50,anchor=south east,inner sep=1.5pt] at (axis cs:-0.1,-0.112) {equality};
+\end{axis}
+\end{tikzpicture}}
+
+\newcommand{\figprofile}{%
+\begin{tikzpicture}[font=\sffamily\footnotesize]
+\begin{axis}[pub,width=7cm,height=5.2cm,xlabel={Learning rate $\eta$},ylabel={Loss above the best fit},ymin=0,ymax=75.05,xmin=-0.02,xmax=0.83]
+\addplot[cA,mark=*,mark size=1.3pt] coordinates {(0,65.3) (0.05,42.9) (0.1,27.7) (0.2,5.28) (0.3,0.937) (0.36,0) (0.45,1.89) (0.6,11.7) (0.8,44.3)};
+\end{axis}
+\end{tikzpicture}}

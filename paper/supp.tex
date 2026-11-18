@@ -1,0 +1,136 @@
+\clearpage
+\appendix
+\renewcommand{\thetable}{S\arabic{table}}\renewcommand{\thefigure}{S\arabic{figure}}\setcounter{table}{0}\setcounter{figure}{0}
+\renewcommand{\theHtable}{S\arabic{table}}\renewcommand{\theHfigure}{S\arabic{figure}}
+\section*{Supplementary Information}
+
+\begin{table}[htbp]
+\centering
+\caption{Parameter estimates for Study~3 (adjusted means, 31 moments) with approximate standard errors in parentheses. Standard errors use a local sandwich covariance, combining the simulated-moment Jacobian with the joint covariance from 2,000 whole-chain bootstrap resamples. They omit simulation and model-selection uncertainty.}
+\label{tab:params}
+\begin{tabular}{lccc}
+\toprule
+Parameter & Half positive & Positive only & Base rate \\
+\midrule
+Lay prior offset $\mu_b$ & $0.83$ (0.02) & $0.88$ (0.03) & $0.79$ (0.02) \\
+Spread of prior $s_b$ & $0.28$ (0.10) & $0.25$ (0.09) & $0.22$ (0.10) \\
+Learning rate $\eta$ & $0.31$ (0.08) & $0.23$ (0.09) & $0.35$ (0.07) \\
+Noise in prevalence reports $\sigma_p$ & $1.15$ (0.04) & $1.16$ (0.04) & $1.16$ (0.03) \\
+Position of vignette $v$ & $0.50$ (0.03) & $0.50$ (0.03) & $0.51$ (0.03) \\
+Noise in ratings $\sigma_r$ & $0.49$ (0.12) & $0.47$ (0.11) & $0.48$ (0.13) \\
+Self-rating offset $c_s$ & $-0.27$ (0.07) & $-0.26$ (0.07) & $-0.26$ (0.07) \\
+Prevalence at mean prior offset (\%) & 20.2 (0.7) & 19.1 (0.9) & 21.4 (0.7) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Loss on 31 moments for each dataset and model version, or 23 for generations 1 to 5 (lower is better). The learning rate $\eta$ of the half-positive version is given for reference. Losses use a diagonal bootstrap weight matrix and are descriptive, not likelihood-ratio statistics. Dashes indicate fits not reported.}
+\label{tab:losses}
+\begingroup\small\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lccccc}
+\toprule
+Dataset & Half positive & Positive only & Base rate & Constant source & $\eta$ \\
+\midrule
+Study 3, adjusted means & 32.9 & 34.1 & 29.8 & 42.5 & 0.31 \\
+Study 3, unadjusted means & 36.5 & 38.5 & 34.5 & 53.8 & 0.36 \\
+Study 3, adjusted, AI-flagged removed & 33.4 & 34.6 & 28.9 & 45.5 & 0.33 \\
+Study 2, unadjusted means & 31.7 & 38.7 & 37.4 & 40.4 & 0.11 \\
+Study 3, generations 1 to 5 & 15.7 & -- & -- & 22.9 & 0.27 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Reduction in implied prevalence among lay agents (percentage points) produced by experts on 5\% of nodes of a scale-free network, at the most connected nodes / at random nodes, by reversion rate $\lambda$ and share of positive cases $q$.}
+\label{tab:sens}
+\begingroup\small\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lccccc}
+\toprule
+$\lambda$ & $q=20\%$ & $q=35\%$ & $q=50\%$ & $q=70\%$ & $q=90\%$ \\
+\midrule
+0.02 & 8.8 / 4.2 & 9.6 / 4.1 & 9.8 / 3.7 & 9.4 / 3.1 & 7.1 / 2.0 \\
+0.05 & 6.8 / 2.6 & 7.3 / 2.6 & 7.3 / 2.4 & 6.8 / 2.0 & 5.1 / 1.4 \\
+0.1 & 5.1 / 1.7 & 5.4 / 1.7 & 5.3 / 1.6 & 4.9 / 1.4 & 3.6 / 1.0 \\
+0.2 & 3.5 / 1.0 & 3.6 / 1.0 & 3.5 / 1.0 & 3.1 / 0.9 & 2.2 / 0.7 \\
+0.4 & 1.9 / 0.5 & 1.9 / 0.5 & 1.8 / 0.5 & 1.6 / 0.5 & 1.1 / 0.4 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\figpred
+\caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}
+\label{fig:pred}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\figprofile
+\caption{Loss as a function of the learning rate, with the other parameters re-optimised at each value (Study~3, unadjusted means, 28 moments without adjacent-participant correlations). Zero learning and the largest rate examined give higher loss. This descriptive profile is not a calibrated confidence interval.}
+\label{fig:profile}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Mean implied prevalence for different expert placements using baseline parameters and parameters from the main chain fit. Entries are mean implied prevalence among lay agents (percent) over the last 60 of 300 rounds, averaged across 20 scale-free networks of 200 agents, with $q=0.5$ and $\lambda=0.1$.}
+\label{tab:calibration}
+\begin{tabular}{lrrrr}
+\toprule
+Parameters & No experts & 2\% at hubs & 10\% random & 5\% at hubs \\
+\midrule
+Baseline parameters & 22.32 & 19.23 & 19.77 & 17.12 \\
+Main chain fit & 22.51 & 19.32 & 19.86 & 17.16 \\
+\bottomrule\end{tabular}\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Comparisons within the same collection days. Study~2 entries are the difference in generation slopes between examples and words, with chain-clustered 95\% intervals. Study~4 entries compare readers of a generation~7 text with readers of the diagnostic criteria, with normal-approximation 95\% intervals. Model predictions compare an eighth reader in a simulated chain with a reader of the criteria and omit parameter uncertainty. Other- and self-diagnosis use percentage points, and reported prevalence uses log odds.}
+\label{tab:conditions}
+\begingroup\small\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrr}
+\toprule
+Comparison & Other-diagnosis & Self-diagnosis & Prevalence \\
+\midrule
+Study 2, slope difference & 1.2 (-1.3, 3.7) & 0.6 (-1.2, 2.4) & 0.014 (-0.050, 0.078) \\
+Study 4, observed difference & 1.9 (-10.5, 14.4) & -2.1 (-9.9, 5.7) & 0.04 (-0.26, 0.34) \\
+Study 2 fit, predicted difference & 6.29 & 1.62 & 0.20 \\
+Study 3 fit, predicted difference & 16.14 & 4.72 & 0.42 \\
+\bottomrule\end{tabular}\endgroup\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Conditional model recovery from ten synthetic experiments of 220 chains per generating model. A recovery counts when the generating model has lower loss than the other fitted model. The simulation check re-evaluates both fitted models with three new seeds and 20,000 chains per seed. The range gives constant-source loss minus partial-copying loss in that check, so positive values favour partial copying. Generating parameters and observed-data weights are held fixed. Counts also depend on the finite optimiser budget. The changing-source alternative is not tested here.}
+\label{tab:recovery}
+\begin{tabular}{lrrrr}
+\toprule
+Generating model & $N$ & Fit recoveries & Check recoveries & Check loss gap \\
+\midrule
+Partial copying & 10 & 10 & 10 & 2.6 to 27.4 \\
+Constant source & 10 & 4 & 4 & -6.0 to 12.4 \\
+\bottomrule\end{tabular}
+\par\smallskip\begin{minipage}{0.95\textwidth}\small
+When partial copying generated the data, refitting it gave $\eta$ from 0.20 to 0.51 (generating value 0.31), prevalence at the mean prior offset from 19.06 to 21.07\% (generating value 20.24\%) and $s_b$ from 0.05 to 0.58 (generating value 0.28). These ranges describe ten synthetic datasets and are not confidence intervals.
+\end{minipage}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{No-lineage parameter estimates on adjusted Study~3 moments. The changing-source model uses $b_L+\delta(g-2)$ for generations $g\geq2$. Generation~1 receives the diagnostic source in both models. These alternatives require different reader priors from partial copying. Parameters are conditional fits, not direct measurements of pre-reading beliefs.}
+\label{tab:alternative}
+\begin{tabular}{lrr}
+\toprule
+Parameter & Constant source & Changing source \\
+\midrule
+Lay prior offset $\mu_b$ & -0.923 & -0.600 \\
+Spread of prior $s_b$ & 0.760 & 0.758 \\
+Learning rate $\eta$ & 0.564 & 0.554 \\
+Noise in prevalence reports $\sigma_p$ & 1.090 & 1.095 \\
+Position of vignette $v$ & 0.525 & 0.505 \\
+Noise in ratings $\sigma_r$ & 0.335 & 0.413 \\
+Self-rating offset $c_s$ & -0.237 & -0.268 \\
+Initial lay source offset $b_L$ & 1.345 & 1.453 \\
+Source change per generation $\delta$ & -- & -0.049 \\
+\bottomrule\end{tabular}\end{table}

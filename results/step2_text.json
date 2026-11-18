@@ -1,0 +1,124 @@
+{
+ "2": {
+  "n_writers": 1308,
+  "validity": {
+   "r": 0.11934331405261087,
+   "lo": 0.06338668742768978,
+   "hi": 0.17661127567895113,
+   "n": 1308
+  },
+  "transmission": {
+   "r": 0.06433315644918775,
+   "lo": 0.003185374076264325,
+   "hi": 0.12270127321823178,
+   "n": 1308
+  },
+  "baseline_ratings": {
+   "r": 0.05196895305538144,
+   "lo": -0.008249784115912059,
+   "hi": 0.10731342470599485,
+   "n": 1308
+  },
+  "text_lineage": {
+   "r": 0.2540260674585806,
+   "lo": 0.17593674232537868,
+   "hi": 0.32232490706193156,
+   "n": 1090
+  },
+  "broad_terms": [
+   "doing",
+   "brain",
+   "like",
+   "need",
+   "urge",
+   "focused",
+   "feels",
+   "racing",
+   "thoughts",
+   "overwhelmed",
+   "things",
+   "feel",
+   "needed",
+   "hyperfocus",
+   "example"
+  ],
+  "strict_terms": [
+   "behaviour",
+   "able",
+   "appointment",
+   "forgetting appointments",
+   "sit",
+   "concentrate",
+   "quickly",
+   "form",
+   "school",
+   "particular",
+   "unable focus",
+   "fidgety",
+   "unable",
+   "work",
+   "focussing"
+  ]
+ },
+ "3": {
+  "n_writers": 1320,
+  "validity": {
+   "r": 0.10300228544535207,
+   "lo": 0.04796535380602465,
+   "hi": 0.1585998141426817,
+   "n": 1320
+  },
+  "transmission": {
+   "r": -0.07596037616260931,
+   "lo": -0.12743694163573743,
+   "hi": -0.020802370059236668,
+   "n": 1320
+  },
+  "baseline_ratings": {
+   "r": 0.02448265021914735,
+   "lo": -0.032950026349248936,
+   "hi": 0.0769320791793401,
+   "n": 1320
+  },
+  "text_lineage": {
+   "r": 0.1908125076047109,
+   "lo": 0.12725489714142338,
+   "hi": 0.2512910333199165,
+   "n": 1100
+  },
+  "broad_terms": [
+   "doing",
+   "don",
+   "start",
+   "like",
+   "trying",
+   "talk",
+   "starting",
+   "neurodevelopmental",
+   "task getting",
+   "disorder common",
+   "adhd affects",
+   "mood",
+   "process",
+   "affects",
+   "lose"
+  ],
+  "strict_terms": [
+   "condition",
+   "disorder adhd",
+   "adhd mental",
+   "fidget",
+   "concentrating",
+   "people condition",
+   "needs",
+   "single",
+   "condition people",
+   "concentrate",
+   "age",
+   "condition person",
+   "days",
+   "inability concentrate",
+   "adhd lack"
+  ]
+ }
+}
