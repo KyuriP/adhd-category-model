@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 """Fig 3 (learning rules) and the related supplementary tables, from saved results."""
+=======
+"""Generate the complete sensitivity figure, methods and tables from saved results."""
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 import json
 from pathlib import Path
 import numpy as np
@@ -17,8 +21,13 @@ def figures():
 \begin{groupplot}[pub,group style={group size=2 by 1,horizontal sep=2.0cm},width=7.5cm,height=6.0cm,xlabel={Positive examples (\%)},xmin=0,xmax=100,xtick={5,20,50,90},legend style={draw=none,fill=none,font=\scriptsize}]
 ''']
  for panel in ('drift','sources'):
+<<<<<<< HEAD
   if panel=='drift':out.append(r'\nextgroupplot[title={\textbf{a}\quad Change across learning rules},ylabel={Change in category breadth (points)},ymin=-7,ymax=12,legend style={at={(0.03,0.97)},anchor=north west}]'+'\n')
   else:out.append(r'\nextgroupplot[title={\textbf{b}\quad Source influence depends on learning},ylabel={Broad minus strict influence},ymin=-0.07,ymax=0.2]'+'\n')
+=======
+  if panel=='drift':out.append(r'\nextgroupplot[title={\textbf{a}\quad Direction persists, size differs},ylabel={Change in category breadth (points)},ymin=-7,ymax=12,legend style={at={(0.03,0.97)},anchor=north west}]'+'\n')
+  else:out.append(r'\nextgroupplot[title={\textbf{b}\quad Broad sources do not always win},ylabel={Broad minus strict influence},ymin=-0.07,ymax=0.2]'+'\n')
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
   out.append(r'\draw[gray,dashed] (axis cs:0,0)--(axis cs:100,0);'+'\n')
   for rule in LABELS:
    cases=sorted([c for c in a['cases'] if c['settings']['group']==panel and c['settings']['rule']==rule and not c['settings']['aligned'] and c['settings']['lam']==.1],key=lambda c:c['settings']['q'])
@@ -103,6 +112,7 @@ All planned cases are reported. Twenty independent populations are simulated per
  text+=table(r'Sensitivity to the strength of label-only learning. The first three outcome columns give change in implied prevalence (percentage points) in fully connected populations. The last gives broad minus strict source influence at hubs at $q=0.5$ on scale-free networks, in offset units with a paired 95\% interval. All settings use two traits, $\lambda=0.1$, 20 populations and rounds 481 to 600. Strength is $\alpha$ for fixed-step learning and $\eta$ for error-scaled learning.',
  'tab:steps','lrrrrl',r'Rule & Strength & $q=0.05$ & $q=0.5$ & $q=0.9$ & Broad minus strict at hubs',rows)
  return text
+<<<<<<< HEAD
 
 
 NETWORK_SUPPLEMENT_FIGURE = r"""\begin{figure}[htbp]
@@ -112,3 +122,5 @@ NETWORK_SUPPLEMENT_FIGURE = r"""\begin{figure}[htbp]
 \label{fig:robust}
 \end{figure}
 """
+=======
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8

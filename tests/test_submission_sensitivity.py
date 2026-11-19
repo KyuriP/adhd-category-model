@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 """Checks for the reference refits, the label-only rules and the matched populations."""
+=======
+"""Checks for reference changes, label-only information access and matched populations."""
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 from pathlib import Path
 import sys
 import unittest

@@ -24,13 +24,18 @@
 \maketitle
 
 \begin{abstract}
+<<<<<<< HEAD
 \noindent How does learning from other people change who is thought to have a diagnosis? We model people who partly revise their understanding when they disagree about a case. When people exchange examples repeatedly, the balance between cases described as having and not having a condition can determine whether its definition broadens or narrows. The direction of change persists under two alternative rules that learn from examples and labels alone, although the amount of change differs. Partial copying reproduces gradual broadening in an ADHD transmission experiment, but a shared source that changes across generations fits at least as well, so the experiment cannot identify the process. Network simulations further show that the relative influence of broad and strict sources depends on how people learn. The model provides testable predictions about when social learning changes the breadth of diagnostic categories.
+=======
+\noindent How does learning from other people change who is thought to have a diagnosis? We model people who partly revise their understanding when they disagree about a case. When people exchange examples repeatedly, the balance between cases described as having and not having a condition can determine whether its definition broadens or narrows. This direction persists with two learners that use only examples and labels, although the size of the change depends on the learning rule. Partial copying also reproduces gradual broadening in an ADHD transmission experiment, but an alternative without copying between successive readers fits at least as well. The experiment therefore does not establish which process caused the observed change. Network simulations further show that the relative influence of broad and strict sources depends on how people learn. The model provides testable predictions about when social learning changes the breadth of diagnostic categories.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 \end{abstract}
 
 \section{Introduction}
 
 People learn what a diagnosis means from explanations given by other people as well as from clinical criteria. These explanations can differ in who they seem to include. Two readers may agree that someone has difficulty concentrating yet disagree about whether that person has ADHD. If they pass on their own explanations, will these differences simply make the meaning less precise, or can they gradually change who is thought to have the condition?
 
+<<<<<<< HEAD
 This question concerns the breadth of a diagnostic category, meaning the range of people it includes. Haslam describes the widening of concepts of harm and pathology as \emph{concept creep} \citep{haslam2016}. Foulkes and Andrews propose that mental-health awareness efforts may contribute to this process by leading people to interpret milder distress as a disorder \citep{foulkes2023}. We examine a possible learning process behind such broadening. A person may adopt part of another person's explanation while retaining some of their own understanding, then pass this combined view to someone else.
 
 The examples people discuss may give this process a direction. Someone with a strict definition can broaden it after encountering a person whom another speaker describes as having the condition. Someone with a broader definition can narrow it after encountering a person whom the speaker says does not have it. These two opportunities for correction need not occur equally often. We ask how the mix of examples affects who changes their view, and whether repeated discussion can broaden a category even when nobody intends to broaden it. We show that it can. When the share of positive examples exceeds the share of people a category covers, repeated exchange favours broadening, and this direction holds under three different learning rules even though the amount of change does not.
@@ -40,11 +45,26 @@ Previous research explains how people can come to share words or categories by a
 An ADHD transmission experiment provides a separate empirical setting for the model. \citet{katiyar2026} passed explanations from one participant to the next, following a design used to study how information changes through transmission \citep{bartlett1932,mesoudi2008}. The first participant read the DSM-5-TR criteria \citep{dsm5tr} and wrote an explanation for another participant. Each later participant read the previous explanation and wrote a new one. In the main study, participants further along the chains were more likely to say that a fictional person with symptoms below the diagnostic threshold had ADHD. This is consistent with a diagnosis being applied more broadly, but it leaves open how the change arose.
 
 We first derive a condition under which partial copying favours broadening or narrowing, then examine repeated exchange with different learning rules and sources at different positions in a network. Earlier models already establish that people who keep their views fixed can influence a larger group and that their connections matter \citep{mobilia2003,mobilia2007,xie2011,centola2018,acemoglu2013,yildiz2013,hunter2022}. We ask how learning from selected examples changes the relative influence of broad and strict views. Finally, we fit the copying model to the ADHD experiment. This fit shows what the model can account for, while comparisons with alternative explanations establish what the data cannot distinguish. The experiment observes each participant after one reading, so it does not test the predictions about repeated discussion (Figure~\ref{fig:concept}).
+=======
+This question concerns the breadth of a diagnosis, meaning the range of people to whom it is applied. Haslam describes the widening of concepts of harm and pathology as \emph{concept creep} \citep{haslam2016}. Foulkes and Andrews propose that mental-health awareness efforts may contribute to this process by leading people to interpret milder distress as a disorder \citep{foulkes2023}. We examine a possible learning process behind such broadening. A person may adopt part of another person's explanation while retaining some of their own understanding, then pass this combined view to someone else.
+
+The examples people discuss may give this process a direction. Someone with a strict definition can broaden it after encountering a person whom another speaker describes as having the condition. Someone with a broader definition can narrow it after encountering a person whom the speaker says does not have it. These two opportunities for correction need not occur equally often. We ask how the mix of examples affects who changes their view, and whether repeated discussion can broaden a category even when nobody intends to broaden it.
+
+Previous research explains how people can come to share words or categories by adjusting to one another after disagreements \citep{steels1995,baronchelli2006,puglisi2008,centola2015}. Judgements also depend on which examples people encounter \citep{parducci1965,levari2018}. Studies of information passed through successive learners show how their existing expectations can shape what is transmitted \citep{griffiths2007,kalish2007}. Our question brings these processes together. We study the direction of change in category breadth when people learn from examples selected by others, and distinguish changes that persist across learning rules from those that depend on a particular rule.
+
+An ADHD transmission experiment provides a separate empirical setting for the model. \citet{katiyar2026} passed explanations from one participant to the next, following a design used to study how information changes through transmission \citep{bartlett1932,mesoudi2008}. The first participant read the DSM-5-TR criteria \citep{dsm5tr} and wrote an explanation for another participant. Each later participant read the previous explanation and wrote a new one. In the main study, participants further along the chains were more likely to say that a fictional person with symptoms below the diagnostic threshold had ADHD. This is consistent with a diagnosis being applied more broadly, but it leaves open how the change arose.
+
+We first derive when repeated exchange broadens or narrows a category, then test the prediction with different learning rules and with sources placed at different positions in a network. Earlier models already establish that people who keep their views fixed can influence a larger group and that their connections matter \citep{mobilia2003,mobilia2007,xie2011,centola2018,acemoglu2013,yildiz2013,hunter2022}. We ask how learning from selected examples changes the relative influence of broad and strict views. Finally, we fit the copying model to the ADHD experiment. This fit shows what the model can account for, while comparisons with alternative explanations establish what the data cannot distinguish. The experiment observes each participant after one reading, so it does not test the predictions about repeated discussion (Figure~\ref{fig:concept}).
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \begin{figure}[tbp]
 \centering
 \resizebox{\textwidth}{!}{\figconcept}
+<<<<<<< HEAD
 \caption{One reading and repeated discussion. In the upper panel, each person reads one explanation and passes on a version shaped by their own initial understanding. The percentages show how many people each reader would classify as having the condition in the fitted model. The lower panel illustrates the prediction for repeated exchange when positive examples are common. Discussing many people said to have the condition can broaden its use further. Here $q$ is the share of discussed cases described as having the condition. The population need not reach that share, because change can stop when people agree or be limited by a return towards their initial views.}
+=======
+\caption{One reading and repeated discussion. In the upper panel, each person reads one explanation and passes on a version shaped by their own initial understanding. The percentages show how many people each reader would classify as having the condition in the fitted model. The readers' initial views were estimated from their later responses, not measured before reading. The lower panel illustrates the prediction for repeated exchange when positive examples are common. Discussing many people said to have the condition can broaden its use further. Here $q$ is the share of discussed cases described as having the condition. The population need not reach that share, because change can stop when people agree or be limited by a return towards their initial views.}
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 \label{fig:concept}
 \end{figure}
 
@@ -63,7 +83,11 @@ A learner receives ten examples from another person, whom we call the source. Th
 \end{equation}
 Here $\eta$ is the fraction of the remaining difference copied at each disagreement, not the fraction copied over a whole reading. Agreement leaves the learner unchanged. This rule represents partial copying of another person's understanding. It assumes access to the source's boundary. Later checks replace this assumption with learning from examples and labels alone.
 
+<<<<<<< HEAD
 We use the rule in two settings. In a transmission chain, each new reader starts with their own understanding and reads one explanation. The first reader receives the diagnostic criteria, and each later reader receives the preceding person's explanation. In repeated exchange, the same people learn from their neighbours over many rounds. After each round, they move a fraction $\lambda$ back towards their own initial understanding. This return allows differences between people to persist. We refer to these initial views as their \emph{priors}. The chain experiment helps estimate the distribution of these initial views but cannot identify the rate of return during repeated discussion.
+=======
+We use the rule in two settings. In a transmission chain, each new reader starts with their own understanding and reads once, first from the diagnostic source and then from the preceding reader. In repeated exchange, the same people learn from their neighbours over many rounds. After each round, they move a fraction $\lambda$ back towards their own initial understanding. This return allows differences between people to persist. We refer to these initial views as their \emph{priors}. The chain experiment helps estimate their distribution but cannot identify the rate of return during repeated discussion.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \subsection{The examples discussed give change a direction}
 \label{sec:drift}
@@ -80,7 +104,11 @@ Let the broader person's offset be $b_1$ and the stricter person's be $b_2>b_1$.
 \end{equation}
 For nearby boundaries, a positive share $q$ above the category's implied prevalence favours broadening, while a share below it favours narrowing. Thus, for categories covering 5\% to 20\% of people, discussing positive cases more than a fifth of the time favours broadening in this local approximation. Whether everyday ADHD communication meets this condition remains an empirical question.
 
+<<<<<<< HEAD
 The approximation has limits. With a finite gap, the two correction probabilities balance at $q_*=[1-\Phi(b_1)]/[\Phi(b_2)+1-\Phi(b_1)]$, not generally at either person's implied prevalence. When people weight the two traits differently, their boundaries can cross. Neither person then necessarily includes all the cases included by the other. Moreover, a direction of change while people disagree does not guarantee that the population will eventually classify a share $q$ as positive.
+=======
+The approximation has limits. With a finite gap, the two correction probabilities balance at $q_*=[1-\Phi(b_1)]/[\Phi(b_2)+1-\Phi(b_1)]$, not generally at either person's implied prevalence. Boundaries with different orientations need not be nested. Moreover, a direction of change while people disagree does not guarantee that the population will eventually classify a share $q$ as positive.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \begin{figure}[tbp]
 \centering
@@ -89,6 +117,7 @@ The approximation has limits. With a finite gap, the two correction probabilitie
 \label{fig:drift}
 \end{figure}
 
+<<<<<<< HEAD
 We checked the local prediction across 64 combinations of initial category breadth and positive-example share. After one round of exchange, the simulated mean boundary offset moves in the predicted direction in all 56 combinations away from $\pi=q$ (Figure~\ref{fig:drift}b). Two learning rules that use only examples and labels give the same directions when their boundaries are aligned. An approximation to the size of the shift captures the ordering of the settings but overstates the magnitude about fourfold. Averaging a deterministic update over pairs gives a closer approximation (Supplementary Figure~\ref{fig:pred} and Supplementary Information, Section~\ref{sec:si_learning}).
 
 Under partial copying, change stops when everyone agrees. It can continue when differences persist, as they do here when people return towards their initial views. Starting from priors with mean implied prevalence about 21\%, the model with $\lambda=0.02$ reaches late-run means of 16\%, 24\% and 30\% when the shares of positive examples are 5\%, 50\% and 90\%, respectively (Figure~\ref{fig:drift}c). Varying the spread of priors by one approximate standard error gives 22\% to 25\% at $q=0.5$ and 25\% to 33\% at $q=0.9$. Neither $q$ nor $\lambda$ is estimated from the chain experiment, so these values are conditional predictions.
@@ -100,6 +129,68 @@ We next ran repeated exchange for 600 rounds under two alternative learning rule
 All three rules produce narrowing when 5\% of examples are positive and broadening when 50\% or 90\% are positive, across the tested settings. The size of the effect differs. With differently oriented boundaries and $\lambda=0.1$, a positive share of 50\% increases mean implied prevalence by 1.5 percentage points under copying, 4.1 under fixed-step learning and 2.4 under error-scaled learning. At 90\%, the increases are 5.1, 9.8 and 6.0 points (Figure~\ref{fig:rules}a). Halving or doubling the alternative learners' update strengths preserves these directions (Supplementary Tables~\ref{tab:repeated} and~\ref{tab:steps}).
 
 Selecting examples gives repeated social learning the same direction across these rules, but the predicted amount of broadening differs. Without a return to initial views, the fixed-step learner can move far beyond the original range of boundaries, whereas copying remains within that range.
+=======
+We checked the local prediction across 64 combinations of initial category breadth and positive-example share. After one round of exchange, the simulated mean boundary moves in the predicted direction in all 56 combinations away from $\pi=q$ (Figure~\ref{fig:drift}b). Two learners using only labels give the same signs when their boundaries are aligned. An approximation to the size of the shift captures the ordering of the settings but overstates the magnitude about fourfold. Averaging a deterministic update over pairs gives a closer approximation (Supplementary Figure~\ref{fig:pred} and Supplementary Note~1).
+
+Under partial copying, change stops when everyone agrees. It can continue when newcomers or a return towards initial views keep people apart. Starting from priors with mean implied prevalence about 21\%, the model with $\lambda=0.02$ reaches late-run means of 16\%, 24\% and 30\% when the shares of positive examples are 5\%, 50\% and 90\%, respectively (Figure~\ref{fig:drift}c). Varying the spread of priors by one approximate standard error gives 22\% to 25\% at $q=0.5$ and 25\% to 33\% at $q=0.9$. These are conditional predictions. Neither $q$ nor $\lambda$ is estimated from the chain experiment.
+
+\subsection{Broadening persists across learning rules, but its size changes}
+
+We next ran repeated exchange for 600 rounds with two learners that have access only to an example and its label. One makes a fixed-step correction after disagreement. The other scales the correction by the size of its prediction error. Both can change the weights they place on the two traits as well as their strictness. We compared them with partial copying in 20 populations of 200 people per setting, with aligned and differently oriented boundaries and three rates of return to initial views (Methods).
+
+All three rules produce narrowing when 5\% of examples are positive and broadening when 50\% or 90\% are positive, across the tested settings. The size of the effect differs. With differently oriented boundaries and $\lambda=0.1$, a positive share of 50\% increases mean implied prevalence by 1.5 percentage points under copying, 4.1 under fixed-step learning and 2.4 under error-scaled learning. At 90\%, the increases are 5.1, 9.8 and 6.0 points (Figure~\ref{fig:rules}a). Halving or doubling the alternative learners' update strengths preserves these directions (Supplementary Tables~\ref{tab:repeated} and~\ref{tab:steps}).
+
+The common result is that selecting examples can give repeated social learning a direction. The copying model's predicted amounts of broadening do not transfer unchanged to other learning rules. These are averages over the last 120 simulated rounds, not proofs of convergence. Without a return to initial views, the fixed-step learner can move far beyond the original range of boundaries, whereas copying remains within that range.
+
+\subsection{Well-connected sources can limit broadening}
+\label{sec:net}
+
+We then introduced people whose views stay fixed. A strict source holds the diagnostic reference and never updates. We call these sources experts within the model, without assuming that real experts are inflexible or differ from other people only in strictness. Each learner chooses one neighbour at random per round. A person with many connections, or a hub, is consequently more likely to be read. This sampling rule already favours well-connected sources, as in related models of fixed opinions \citep{mobilia2007}.
+
+With partial copying, half the examples positive and $\lambda=0.1$, experts on 5\% of random nodes reduce mean implied prevalence only slightly, from about 22\% to 21\%. Experts on 5\% of the most connected nodes reduce it to about 17\% (Figure~\ref{fig:net}). In a separate comparison across 40 networks, experts on 2\% of nodes at hubs reduce implied prevalence by 3.4 percentage points (95\% interval 3.2 to 3.6). This is 1.1 points more than experts on 10\% of nodes at random (0.8 to 1.5).
+
+The advantage comes partly from reaching more people directly. With 5\% of nodes occupied by experts, 62\% of lay agents have an expert neighbour under hub placement, compared with 18\% under random placement. Agents one step from a hub expert have a median implied prevalence of 15\%, while those three steps away are barely affected. On a ring, the effect similarly weakens with distance. The return towards initial views limits how far an expert's influence travels.
+
+\begin{figure}[tbp]
+\centering
+\resizebox{\textwidth}{!}{\fignet}
+\caption{Expert sources on a scale-free network. (a, b) One scale-free network of 150 agents with eight experts (orange, about 5\%), at the most connected positions or at random positions. Colours average the last 60 of 300 rounds. Colour gives the breadth of each lay agent's category after repeated exchange, and symbol size the number of connections for lay agents. (c) Mean implied prevalence among lay agents over the last 60 of 300 rounds for each share of experts, with experts at random positions (grey) or at the hubs (blue), averaged across 20 networks of 200 agents. The arrow marks that experts on 2\% of nodes at the hubs lower prevalence more than experts on 10\% of nodes at random. (d) Implied prevalence of individual lay agents, averaged over the last 40 of 200 rounds, by the number of steps to the nearest expert, with experts on 5\% of nodes in 20 independent 200-node networks. Boxes give the quartiles and median, lines the 10th to 90th percentiles, and dots a random sample of agents. Numbers give the share of lay agents at each distance.}
+\label{fig:net}
+\end{figure}
+
+The placement advantage persists across positive shares from 20\% to 90\%, return rates from 0.02 to 0.4 and networks of 100 to 1{,}000 agents (Figure~\ref{fig:robust}a,b). In the parameter grid, hubs produce 2.1 to 3.8 times the reduction from the same number of randomly placed experts. A separate 40-network comparison at $q=0.5$ and $\lambda=0.1$ gives a ratio of 4.7 (bootstrap interval 3.7 to 6.4). Ratios are sensitive to the small reduction under random placement, so we also report absolute effects. In modular networks with similar numbers of connections per person, choosing the most connected agents makes little difference. Concentrating all experts in one community also reduces their reach.
+
+Repeating the main placement comparison with the final chain-fit parameters preserves the advantage of 2\% of experts at hubs over 10\% at random (Supplementary Table~\ref{tab:calibration}). It also persists after refitting the model at diagnostic references of 2.5\% and 10\% and running the networks for 600 rounds (Supplementary Table~\ref{tab:reference_network}). This checks the placement contrast within the copying model, rather than establishing a real-world intervention effect.
+
+\subsection{The advantage of broad sources depends on how people learn}
+
+We compared strict sources with equally distant broad sources. Equal distance here means that their offsets lie equally far above and below the mean prior offset. It does not mean equal differences in implied prevalence. Strict and broad sources are tested in separate populations, rather than competing within one network.
+
+Under copying, broad sources have more influence when many examples are positive (Figure~\ref{fig:robust}c). At $q=0.5$, they move mean offsets 1.4 times as far as strict sources at hubs and 1.9 times as far at random positions. At $q=0.9$, the ratios are 2.1 and 3.5. Across 40 networks, the intervals for the difference between broadening and narrowing exclude zero in each case. Near the initial category breadth, at $q=0.2$, the ratios are 1.07 at hubs and 0.98 at random positions. The small hub difference remains distinguishable from zero, so this setting is not an exact balance point.
+
+\begin{figure}[tbp]
+\centering
+\resizebox{0.92\textwidth}{!}{\figrobust}
+\caption{Expert placement and source influence under partial copying, with experts on 5\% of nodes. (a) Reduction in implied prevalence among lay agents produced by experts at the hubs, divided by the reduction produced by the same number at random positions, for different shares of positive examples $q$ and reversion rates $\lambda$, which the chain data cannot identify (scale-free network, 200 agents). (b) Reduction with experts at random positions (grey) and at the hubs (blue) for scale-free networks of different sizes, a scale-free network with clustering, and a modular network in which agents have similar numbers of connections. (c) Shift in mean lay offset relative to a no-source condition, measured after round 300, for strict sources (left) and broad sources (right) on 5\% of nodes. Source offsets are equally distant from the mean prior offset. Lines are 95\% intervals for the mean across 40 networks, with $\lambda=0.1$. Numbers give the broadening-to-narrowing ratio.}
+\label{fig:robust}
+\end{figure}
+
+This asymmetry is less general than the direction of broadening. In the 600-round comparisons with matched initial populations, broad sources retain an advantage at $q=0.9$ under all three learning rules. At $q=0.5$, the fixed-step learner's difference between broad and strict sources is small and its interval includes zero. At $q=0.2$, strict sources have more influence under that rule. Doubling the fixed step also gives strict sources an advantage at hubs when $q=0.5$ (Figure~\ref{fig:rules}b and Supplementary Tables~\ref{tab:source_rules} and~\ref{tab:steps}). Broad sources therefore do not have an advantage simply because the category is rare. Their relative influence also depends on how disagreement changes a learner's judgement.
+
+\begin{figure}[tbp]
+\centering
+\resizebox{\textwidth}{!}{\figlearningrules}
+\caption{What persists across learning rules. (a) Change in mean implied prevalence after repeated exchange in fully connected populations with differently oriented boundaries. (b) Difference between the broadening produced by broad sources and the narrowing produced by equally distant strict sources at hubs, measured in offset units on scale-free networks. Positive values favour broad sources. Each curve represents one learning rule. Both panels use 20 populations of 200 agents, $\lambda=0.1$ and averages over rounds 481 to 600. Panel (b) places fixed sources on 5\% of nodes and compares each source condition with the same lay agents in a matched no-source population. Error bars are normal-approximation 95\% intervals across populations. They describe simulation variability at fixed settings, not uncertainty about human learning.}
+\label{fig:rules}
+\end{figure}
+
+\subsection{The chain data allow more than one explanation}
+\label{sec:chain}
+
+We fitted the copying model to Study~3 of \citet{katiyar2026}, which followed 220 chains over seven generations. After reading, participants judged whether a vignette character with subclinical symptoms had ADHD, whether they themselves did, and what share of the population did. The fitted data comprise the generation means of these measures, the spread of prevalence estimates and the correlations between successive readers (Methods).
+
+The fitted model reproduces gradual broadening along the chains (Figure~\ref{fig:mech}). In the half-positive version, readers begin with an inferred boundary covering about 20\% of people. Each reading moves them part of the way towards the preceding source. Because each new reader brings their own initial understanding, the influence of the diagnostic source weakens with each step. By the fourth generation the mean boundary is close to the readers' inferred prior. That prior was estimated from their later responses, rather than measured before reading.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \begin{figure}[tbp]
 \centering
@@ -108,6 +199,7 @@ Selecting examples gives repeated social learning the same direction across thes
 \label{fig:rules}
 \end{figure}
 
+<<<<<<< HEAD
 \subsection{Well-connected sources can limit broadening}
 \label{sec:net}
 
@@ -149,6 +241,35 @@ The fitted model reproduces gradual broadening along the chains (Figure~\ref{fig
 \caption{The model fitted to the chain experiment. (a) Distribution of the share of people each reader counts as having ADHD, by generation, in the fitted model, with the lay prior that readers hold before reading at the bottom. One reading of the diagnostic criteria (5\%) leaves readers between the criteria and their prior, and by the fourth generation the distribution is close to the prior. (b--d) Generation means of the three measures (adjusted, with 95\% intervals). Blue bands show the middle 50\% and 90\% of generation means across 400 simulated experiments of 220 chains under fixed fitted parameters, excluding parameter-estimation uncertainty. Orange dashed lines show the constant shared-source alternative. Purple dotted lines show the changing-source alternative.}
 \label{fig:mech}
 \end{figure}
+=======
+The data do not establish that this is the process that occurred. We compared partial copying with two alternatives in which readers do not inherit the previous person's boundary. Instead, everyone in a generation reads from a shared source. A constant shared source predicts one jump followed by a plateau, and fits worse than partial copying. Allowing the shared source to change across generations gives a closer fit than partial copying, with larger simulations confirming the ordering (Table~\ref{tab:fit}). This alternative has two additional parameters. The losses describe fit and do not penalise model complexity, so they cannot select a mechanism. They do show that a changing average across generations need not arise from inheritance within chains.
+
+\begin{table}[htbp]
+\centering
+\caption{Fit to Study~3 using 31 moments and adjusted means. Lower loss indicates a closer fit. Fit loss uses 3,000 simulated chains. The simulation check averages the same criterion over three new seeds with 20,000 chains each, at fixed fitted parameters. It uses the same observations as the fit. Partial-copying models have seven parameters, the constant-source alternative eight and the changing-source alternative nine. Prior breadth is prevalence at the mean initial offset.}
+\label{tab:fit}
+\begingroup\small\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrr}
+\toprule
+Model & Fit loss & Simulation check & $\eta$ & Prior breadth (\%) \\
+\midrule
+Half positive & 32.9 & 32.6 & 0.31 & 20.2 \\
+Positive only & 34.1 & 33.1 & 0.23 & 19.1 \\
+Base rate & 29.8 & 30.3 & 0.35 & 21.4 \\
+Shared source, constant & 42.5 & 42.1 & -- & -- \\
+Shared source, changing & 27.8 & 29.4 & -- & -- \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+The experimental design makes this ambiguity consequential. Each generation was tested on a different day, and the last two generations differed in age and prior exposure to ADHD content. We adjust the fitted means for these observed differences. Partial copying still fits better than a constant source after excluding these generations, removing participants flagged for possible AI use and their downstream readers, or fitting Study~2 (Supplementary Table~\ref{tab:losses}). These comparisons do not exclude unmeasured differences between days.
+
+Individual responses provide little additional evidence of inheritance. The observed correlations between successive readers are between 0.00 and 0.02. The fitted model predicts about 0.04 for their ratings, despite a correlation of about 0.37 between their unobserved boundaries. The fit therefore relies on a noisy measurement model, and the average trajectory carries much of the evidence. In a conditional recovery check, partial copying had lower loss in all ten datasets it generated, but also in six of ten generated by a constant-source model. One was effectively tied. The largest misleading loss gap was 12.4, exceeding the observed gap of 9.5. This small recovery exercise does not establish reliable model selection (Supplementary Table~\ref{tab:recovery}).
+
+The assumed diagnostic reference affects some fitted parameters much more than others. At references of 2.5\%, 5\% and 10\%, the inferred prevalence at the mean prior remains close to 20\%, while the learning rate changes from 0.16 to 0.31 to 0.59. The changing-source alternative fits at least as closely at all three references in the larger-simulation check (Supplementary Table~\ref{tab:reference}). The learning-rate estimate should therefore be interpreted conditional on the reference, not as a general measure of how much people copy.
+
+Two comparisons collected within the same days provide further checks. In Study~2, the differences between the examples and words instructions are imprecise and none is distinguishable from zero. Those instructions also do not control the share of positive examples. Study~4 compared new readers of the criteria with readers of a seventh-generation text from Study~2. Among 215 readers with outcomes, the observed differences are 1.9 percentage points for diagnosing the vignette (95\% interval $-10.5$ to 14.4) and 0.04 log-odds for reported prevalence ($-0.26$ to 0.34). Predictions from the Study~2 fit lie within these intervals, while those from the Study~3 fit exceed their upper limits (Supplementary Table~\ref{tab:conditions}). The predictions omit parameter uncertainty. This is limited compatibility with one calibration, rather than validation of the learning process or the repeated-exchange predictions.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 The data do not establish that this is the process that occurred. We compared partial copying with two alternatives in which readers do not inherit the previous person's boundary. Instead, everyone in a generation reads from a shared source. A constant shared source predicts one jump followed by a plateau, and fits worse than partial copying. Allowing the shared source to change across generations gives a closer fit than partial copying, with larger simulations confirming the ordering (Table~\ref{tab:fit}). This alternative has two additional parameters. The losses describe fit and do not penalise model complexity, so they cannot select a mechanism. They do show that a changing average across generations need not arise from inheritance within chains.
 
@@ -183,7 +304,11 @@ These results also carry a lesson for the design of transmission-chain studies. 
 \FloatBarrier
 \section{Discussion}
 
+<<<<<<< HEAD
 The examples people discuss can give social learning a direction. In the model, examples described as having a condition tend to correct stricter learners, while counter-examples tend to correct broader learners. For a rare category, these opportunities need not balance even when both kinds of example are equally frequent. Partial copying makes this relation explicit. Simulations with two alternative rules that learn from examples and labels alone also produce broadening when positive cases are common, but predict different amounts of change. The claim supported across these rules concerns the direction of change in the tested settings, rather than a universal rate or endpoint.
+=======
+The examples people discuss can give social learning a direction. In the model, examples described as having a condition tend to correct stricter learners, while counter-examples tend to correct broader learners. For a rare category, these opportunities need not balance even when both kinds of example are equally frequent. Partial copying makes this relation explicit. Repeated simulations with two learners that use only examples and labels preserve broadening when positive cases are common, but produce different amounts of change. The claim supported across these rules concerns the direction of change in the tested settings, rather than a universal rate or endpoint.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 This account connects to work on how people form and transmit categories. Models of shared vocabularies and category learning explain how people come to agree \citep{falandays2022,marchetti2020}. Iterated-learning models show how successive learners' expectations can shape the information that survives transmission \citep{griffiths2008,navarro2018}. The return towards an inferred prior in our chain model is also consistent with cultural attraction \citep{claidiere2014}. Our repeated-exchange analysis addresses a different part of this process. It asks whether the examples that trigger disagreement systematically favour broader or stricter judgements while differences between people persist.
 
@@ -191,6 +316,7 @@ The role of feedback matters. In experiments without corrective feedback, people
 
 The network results separate two claims. Well-connected fixed sources have more opportunities to influence others, an established property of social-influence models \citep{acemoglu2013,yildiz2013,hunter2022,kitsak2010}. Our simulations reproduce that advantage and show how a return to personal views can keep its reach local, consistent with models that anchor opinions to initial beliefs \citep{friedkin1990}. The additional comparison concerns whether broad and strict sources have equal influence. They need not under partial copying. Yet the advantage of broad sources can disappear or reverse with fixed-step learning. It should therefore be treated as a prediction about particular learning processes, not a general disadvantage faced by diagnostic experts.
 
+<<<<<<< HEAD
 The ADHD experiment constrains the copying model but cannot establish its mechanism. Successive generations were measured on different days, individual ratings show little resemblance between neighbouring readers, and a changing shared source fits at least as well. The same-day comparisons do not resolve this ambiguity. Changing the diagnostic reference leaves the inferred initial category breadth similar but changes the fitted learning rate substantially. That rate therefore depends on the model assumptions as well as the observed responses.
 
 Several modelling assumptions also need to be kept distinct from observations. A Gaussian trait space and a straight boundary are not a full representation of diagnostic criteria. The model treats a text as ten labelled examples, whereas actual texts often list symptoms. How such lists correspond to positive cases and counter-examples remains open. The example number, order and sampling rule are assumptions. Work on teaching shows that people select examples purposefully \citep{avrahami1997,shafto2014}, but it does not establish the positive-example share in everyday mental-health communication. Nor do our checks cover all possible learners or communication networks. Simulation intervals describe variability between simulated populations, and fitted parameter intervals use a local approximation.
@@ -198,6 +324,15 @@ Several modelling assumptions also need to be kept distinct from observations. A
 A direct empirical test would vary the share of positive cases while holding the number of examples constant, measure the same participants repeatedly, and assess category breadth with several vignettes. Collecting comparison conditions on the same days would separate transmission from changes in who participates. Intervals without further exposure would help estimate how strongly people return towards their initial views. To test source asymmetry, strict and broad descriptions should be matched in their distance from participants' starting judgements and compared under the same exposure schedule.
 
 The model gives a testable account of how the examples people choose to discuss can change the breadth of a category through social learning. The direction of change holds across learning rules, while the amount of change and the relative influence of broad and strict sources depend on how people learn. Whether these processes explain changes in the public understanding of ADHD requires repeated exchanges in which the examples and participants' initial judgements are measured.
+=======
+The ADHD experiment constrains the copying model but cannot establish its mechanism. Successive generations were measured on different days, individual ratings show little resemblance between neighbouring readers, and a changing shared source fits at least as well. The same-day comparisons do not resolve this ambiguity. The reference sensitivity further shows that similar inferred initial breadth can accompany substantially different learning rates. Presenting one fitted rate as a psychological constant would overstate what these data support.
+
+Several modelling assumptions also need to be kept distinct from observations. A Gaussian trait space and a straight boundary are not a full representation of diagnostic criteria. The model treats a text as ten labelled examples, whereas actual texts often list symptoms. How such lists correspond to positive cases and counter-examples remains open. The example number, order and sampling rule are assumptions. Work on teaching shows that people select examples purposefully \citep{avrahami1997,shafto2014}, but it does not establish the positive-example share in everyday mental-health communication. Nor do our checks cover all possible learners or communication networks. The repeated simulations establish behaviour at finite times under specified settings. Their intervals describe variability between simulated populations, while the fitted parameter intervals use a local approximation and omit model-selection and simulation uncertainty.
+
+A direct empirical test would vary the share of positive cases while holding the number of examples constant, measure the same participants repeatedly, and assess category breadth with several vignettes. Collecting comparison conditions on the same days would separate transmission from changes in who participates. Intervals without further exposure would help estimate how strongly people return towards their initial views. To test source asymmetry, strict and broad descriptions should be matched in their distance from participants' starting judgements and compared under the same exposure schedule.
+
+The model's contribution is a testable account of how selected examples can change category breadth through social learning. It also specifies where stronger claims fail. Broadening can persist across different learning rules even when the amount of change and the relative influence of broad and strict sources do not. Whether these processes explain changes in the public understanding of ADHD requires evidence from repeated exchanges in which the examples and participants' initial judgements are measured.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \section{Methods}
 
@@ -249,11 +384,19 @@ The label-only check uses aligned one-dimensional thresholds, the baseline $\eta
 
 We refitted the half-positive and changing-source models with diagnostic reference prevalence 2.5\% and 10\%, using the same adjusted Study~3 moments, parameter bounds, search budget and starting estimates from the 5\% fits. We checked each result with the same three independent 20{,}000-chain simulations. For each reference, we then used its half-positive estimates of $\mu_b$, $s_b$ and $\eta$ in 20 scale-free networks of 200 agents, with the strict source at the corresponding reference. These networks ran for 600 rounds with $q=0.5$ and $\lambda=0.1$. Supplementary Tables~\ref{tab:reference} and~\ref{tab:reference_network} retain the fit and placement results for every reference.
 
+<<<<<<< HEAD
 For the repeated-learning checks, we compared copying with fixed-step and error-scaled updates. The alternative learners use only the current example, its label and their own boundary. In two dimensions they update a linear classifier and normalise its weight vector and offset together. Both rules are given in Section~\ref{sec:si_learning} of the Supplementary Information. All three rules use ten independently sampled examples per round and the same return towards each person's initial angle and offset. We use baseline priors $\mu_b=0.85$, $s_b=0.31$, copying and error-scaled rate 0.28, and fixed step 0.05. The alternative rates are scenarios, not fitted estimates.
 
 The no-source grid comprises three rules, two orientation settings (aligned or a 15-degree spread), three return rates (0, 0.02 and 0.1) and four positive shares (0.05, 0.2, 0.5 and 0.9). Each of the 72 settings uses 20 fully connected populations of 200 agents for 600 rounds. Twelve further settings halve or double the alternative learning strengths at positive shares 0.05, 0.5 and 0.9. We report averages over rounds 481 to 600 and retain trajectories and the preceding 120-round averages to show remaining change. These finite-time summaries do not establish a stationary distribution.
 
 The source comparisons use scale-free networks, differently oriented boundaries and $\lambda=0.1$. We test all three rules at positive shares 0.2, 0.5 and 0.9, with an additional four comparisons varying the alternative learning strengths at $q=0.5$. Each comparison contains a no-source condition and broad or strict sources on 5\% of nodes, at hubs or at random positions. Initial people, graphs and source locations are matched across conditions. The no-source comparison averages over the same lay agents as the corresponding source condition. Broad and strict offsets are equally distant from the mean prior. Normal-approximation 95\% intervals use between-population variation, with paired differences for source effects. Full settings and replicate summaries are supplied in the code repository.
+=======
+For the repeated-learning checks, we compared copying with fixed-step and error-scaled updates. The alternative learners use only the current example, its label and their own boundary. In two dimensions they update a linear classifier and normalise its weight vector and offset together. Supplementary Note~1 gives both rules. All three rules use ten independently sampled examples per round and the same return towards each person's initial angle and offset. We use baseline priors $\mu_b=0.85$, $s_b=0.31$, copying and error-scaled rate 0.28, and fixed step 0.05. The alternative rates are scenarios, not fitted estimates.
+
+The no-source grid comprises three rules, two orientation settings (aligned or a 15-degree spread), three return rates (0, 0.02 and 0.1) and four positive shares (0.05, 0.2, 0.5 and 0.9). Each of the 72 settings uses 20 fully connected populations of 200 agents for 600 rounds. Twelve further settings halve or double the alternative learning strengths at positive shares 0.05, 0.5 and 0.9. We report averages over rounds 481 to 600 and retain trajectories and the preceding 120-round averages to show remaining change. These finite-time summaries do not establish a stationary distribution.
+
+The source comparisons use scale-free networks, differently oriented boundaries and $\lambda=0.1$. We test all three rules at positive shares 0.2, 0.5 and 0.9, with an additional four comparisons varying the alternative learning strengths at $q=0.5$. Each comparison contains a no-source condition and broad or strict sources on 5\% of nodes, at hubs or at random positions. Initial people, graphs and source locations are matched across conditions. The no-source comparison averages over the same lay agents as the corresponding source condition. Broad and strict offsets are equally distant from the mean prior. Normal-approximation 95\% intervals use between-population variation, with paired differences for source effects. Full settings and replicate summaries are supplied in the software archive.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \section*{Data availability}
 
@@ -261,7 +404,11 @@ The experimental data analysed here were collected by \citet{katiyar2026} and ar
 
 \section*{Code availability}
 
+<<<<<<< HEAD
 The code, fitted parameters and simulation outputs are available at \url{https://github.com/KyuriP/adhd-category-model}.
+=======
+The code, fitted parameters and simulation outputs corresponding to this manuscript are provided in Supplementary Software~1, including the tested software environment and reproduction instructions. The archive is the version used for the reported results.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 % \section*{Acknowledgements}
 

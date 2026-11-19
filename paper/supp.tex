@@ -7,9 +7,12 @@
 \renewcommand{\thepage}{S\arabic{page}}\setcounter{page}{1}
 \section*{Supplementary Information}
 \noindent\textbf{Partial copying and the broadening of diagnostic categories through peer transmission}\par\smallskip\noindent Kyuri Park\par\medskip
+<<<<<<< HEAD
 
 \section{Fitting the transmission-chain data}
 \label{sec:si_fits}
+=======
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \begin{table}[htbp]
 \centering
@@ -106,6 +109,35 @@ Initial lay source offset $b_L$ & 1.345 & 1.453 \\
 Source change per generation $\delta$ & -- & -0.049 \\
 \bottomrule\end{tabular}\end{table}
 
+<<<<<<< HEAD
+=======
+\clearpage
+\section*{Supplementary Note 1}
+\subsection*{Approximation to the size of the change}
+For aligned boundaries with small offset differences and negligible change within a reading, the expected change in mean offset over one round is
+\[
+n\eta s_b^2\varphi(b)\frac{\pi-q}{\pi(1-\pi)},
+\]
+where $n$ is the number of examples, $s_b$ the spread of offsets and $\varphi$ the standard normal density. The expression correlates at 0.97 with the simulated shifts across the 64 settings, but overstates their size about fourfold. Corrections during a reading reduce the gap between reader and source and hence the chance of later corrections. Finite heterogeneity and orientation differences also lie outside the approximation. A deterministic mean-update approximation averaged over pairs of aligned boundaries gives correlation 0.999 and regression slope 0.91 (Supplementary Figure~\ref{fig:pred}). It is not an exact expectation of the sequential stochastic process.
+
+\subsection*{Learning from examples and labels alone}
+Let the label $y\in\{-1,+1\}$ indicate whether the source classifies a case $x$ as having the condition. A learner uses the score $z=w^\top x-b$ and updates only if its classification disagrees with $y$. The fixed-step learner updates the unnormalised classifier by
+\[
+w' = w+\alpha yx,\qquad b'=b-\alpha y.
+\]
+The error-scaled learner moves part of the way towards a classifier that places the current example on its boundary,
+\[
+c=\frac{\eta z}{1+\lVert x\rVert^2},\qquad w'=w-cx,\qquad b'=b+c.
+\]
+It then has unnormalised score $(1-\eta)z$ for that example. Both learners divide $w'$ and $b'$ by $\lVert w'\rVert$ to express the classifier as a unit normal and an offset. This rescaling does not change classifications. Neither rule uses the source's offset or orientation. After each reading, the angle and offset return a fraction $\lambda$ towards their initial values, with the shortest angular difference used for the return.
+
+For the aligned threshold checks, orientation stays fixed. The fixed-step learner lowers $b$ by $\alpha$ after a missed positive and raises it after a false positive. The example-directed threshold learner moves $b$ a fraction $\eta$ towards the example's projection on the common normal. The two-dimensional error-scaled update above extends this correction to both weights and offset. These are explicitly different implementations in the two orientation settings.
+
+The main repeated-learning comparisons use $\alpha=0.05$ and $\eta=0.28$. Further checks halve or double these rates. They are not calibrated to equal learning speed, so differences in effect size should not be interpreted as measured differences between human learning strategies. The direction checks test narrowing at $q=0.05$ and broadening at $q=0.5$ and $0.9$. The additional $q=0.2$ setting lies close to the initial category breadth and is not assumed to be an exact balance point.
+
+All planned cases are reported. Twenty independent populations are simulated per case. Averages over rounds 481 to 600 are finite-time summaries. The software includes every population's outcome summary, trajectories sampled every 20 rounds and the difference from rounds 361 to 480. In source comparisons, the no-source baseline excludes the same people who are fixed sources in the comparison condition. This prevents changes in the set of lay agents from entering the estimated source effect. The intervals below describe between-population variation at fixed parameters, rather than uncertainty about the model or empirical effects.
+
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 \begin{table}[htbp]
 \centering
 \caption{Refitting at different diagnostic references. Each fit uses the same adjusted Study~3 targets and a 60-iteration differential-evolution search. The 5\% rows reproduce the main fits. The simulation check averages losses over three independent seeds with 20,000 chains each. Prior breadth is prevalence at the mean prior offset. Losses are descriptive and do not penalise the changing-source model\textquotesingle s two extra parameters. No fit reached the convergence tolerance within the stated search budget.}
@@ -125,6 +157,7 @@ Reference (\%) & Model & Fit loss & Check loss & Prior (\%) & $\eta$ \\
 \end{tabular}\endgroup
 \end{table}
 
+<<<<<<< HEAD
 \FloatBarrier
 
 \section{Change during repeated learning}
@@ -158,6 +191,23 @@ All planned cases are reported. Twenty independent populations are simulated per
 \caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}
 \label{fig:pred}
 \end{figure}
+=======
+\begin{table}[htbp]
+\centering
+\caption{Expert placement after refitting at each diagnostic reference. Mean implied prevalence (percent) averages the last 120 of 600 rounds in 20 scale-free networks of 200 agents, with $q=0.5$ and $\lambda=0.1$. The final column is the additional reduction from experts on 2\% of nodes at hubs compared with 10\% at random, in percentage points with a paired normal-approximation 95\% interval.}
+\label{tab:reference_network}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rrrrrr}
+\toprule
+Reference (\%) & No experts & 2\% hubs & 10\% random & 5\% hubs & Advantage \\
+\midrule
+2.5 & 22.36 & 18.99 & 19.88 & 16.91 & 0.89 (0.31, 1.48) \\
+5 & 22.58 & 19.07 & 19.96 & 16.98 & 0.89 (0.29, 1.48) \\
+10 & 22.30 & 19.65 & 20.32 & 18.06 & 0.67 (0.20, 1.15) \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 
 \begin{table}[htbp]
 \centering
@@ -192,6 +242,7 @@ Two traits & Scaled by error & 0.1 & -3.19 & -0.72 & 2.37 & 5.97 \\
 
 \begin{table}[htbp]
 \centering
+<<<<<<< HEAD
 \caption{Sensitivity to the strength of label-only learning. The first three outcome columns give change in implied prevalence (percentage points) in fully connected populations. The last gives broad minus strict source influence at hubs at $q=0.5$ on scale-free networks, in offset units with a paired 95\% interval. All settings use two traits, $\lambda=0.1$, 20 populations and rounds 481 to 600. Strength is $\alpha$ for fixed-step learning and $\eta$ for error-scaled learning.}
 \label{tab:steps}
 \begingroup\small\setlength{\tabcolsep}{4pt}
@@ -269,6 +320,8 @@ Reference (\%) & No experts & 2\% hubs & 10\% random & 5\% hubs & Advantage \\
 
 \begin{table}[htbp]
 \centering
+=======
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 \caption{Broad minus strict source influence with different learning rules. Entries are differences in the magnitude of the mean-offset shift, with paired normal-approximation 95\% intervals across 20 scale-free networks. Positive values favour broad sources and negative values favour strict sources. Sources occupy 5\% of nodes and lie equally far from the mean prior on the offset scale. All cases have differently oriented boundaries and $\lambda=0.1$, and average rounds 481 to 600.}
 \label{tab:source_rules}
 \begingroup\small\setlength{\tabcolsep}{4pt}
@@ -289,5 +342,26 @@ Scaled by error & 0.9 & 0.085 (0.073, 0.096) & 0.030 (0.022, 0.037) \\
 \end{tabular}\endgroup
 \end{table}
 
+<<<<<<< HEAD
 \FloatBarrier
+=======
+\begin{table}[htbp]
+\centering
+\caption{Sensitivity to the strength of label-only learning. The first three outcome columns give change in implied prevalence (percentage points) in fully connected populations. The last gives broad minus strict source influence at hubs at $q=0.5$ on scale-free networks, in offset units with a paired 95\% interval. All settings use two traits, $\lambda=0.1$, 20 populations and rounds 481 to 600. Strength is $\alpha$ for fixed-step learning and $\eta$ for error-scaled learning.}
+\label{tab:steps}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrl}
+\toprule
+Rule & Strength & $q=0.05$ & $q=0.5$ & $q=0.9$ & Broad minus strict at hubs \\
+\midrule
+Fixed step & 0.025 & -4.02 & 2.89 & 6.98 & -0.000 (-0.009, 0.008) \\
+Fixed step & 0.05 & -5.90 & 4.14 & 9.82 & -0.010 (-0.021, 0.000) \\
+Fixed step & 0.1 & -8.96 & 6.52 & 14.95 & -0.056 (-0.068, -0.044) \\
+Scaled by error & 0.14 & -2.20 & 1.77 & 4.39 & 0.049 (0.042, 0.056) \\
+Scaled by error & 0.28 & -3.19 & 2.37 & 5.97 & 0.053 (0.044, 0.062) \\
+Scaled by error & 0.56 & -4.34 & 3.03 & 7.76 & 0.047 (0.036, 0.058) \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 

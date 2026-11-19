@@ -260,13 +260,21 @@
 \newcommand{\figlearningrules}{%
 \begin{tikzpicture}[font=\sffamily\footnotesize]
 \begin{groupplot}[pub,group style={group size=2 by 1,horizontal sep=2.0cm},width=7.5cm,height=6.0cm,xlabel={Positive examples (\%)},xmin=0,xmax=100,xtick={5,20,50,90},legend style={draw=none,fill=none,font=\scriptsize}]
+<<<<<<< HEAD
 \nextgroupplot[title={\textbf{a}\quad Change across learning rules},ylabel={Change in category breadth (points)},ymin=-7,ymax=12,legend style={at={(0.03,0.97)},anchor=north west}]
+=======
+\nextgroupplot[title={\textbf{a}\quad Direction persists, size differs},ylabel={Change in category breadth (points)},ymin=-7,ymax=12,legend style={at={(0.03,0.97)},anchor=north west}]
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 \draw[gray,dashed] (axis cs:0,0)--(axis cs:100,0);
 \addplot[cA,thick,mark=*,mark size=1.7pt,error bars/.cd,y dir=both,y explicit] coordinates {(5,-3.25930) +- (0,0.09322) (20,-1.04705) +- (0,0.04712) (50,1.54101) +- (0,0.04173) (90,5.06413) +- (0,0.19776) };
 \addplot[cB,thick,mark=*,mark size=1.7pt,error bars/.cd,y dir=both,y explicit] coordinates {(5,-5.89838) +- (0,0.09134) (20,-1.31267) +- (0,0.05808) (50,4.13745) +- (0,0.05397) (90,9.81696) +- (0,0.11881) };
 \addplot[cD,thick,mark=*,mark size=1.7pt,error bars/.cd,y dir=both,y explicit] coordinates {(5,-3.18556) +- (0,0.07184) (20,-0.71956) +- (0,0.03910) (50,2.37298) +- (0,0.04687) (90,5.96933) +- (0,0.13158) };
 \legend{Copying,Fixed step,Scaled by error}
+<<<<<<< HEAD
 \nextgroupplot[title={\textbf{b}\quad Source influence depends on learning},ylabel={Broad minus strict influence},ymin=-0.07,ymax=0.2]
+=======
+\nextgroupplot[title={\textbf{b}\quad Broad sources do not always win},ylabel={Broad minus strict influence},ymin=-0.07,ymax=0.2]
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
 \draw[gray,dashed] (axis cs:0,0)--(axis cs:100,0);
 \addplot[cA,thick,mark=*,mark size=1.7pt,error bars/.cd,y dir=both,y explicit] coordinates {(20,0.02188) +- (0,0.01013) (50,0.08045) +- (0,0.01219) (90,0.14871) +- (0,0.01920) };
 \addplot[cB,thick,mark=*,mark size=1.7pt,error bars/.cd,y dir=both,y explicit] coordinates {(20,-0.04049) +- (0,0.00929) (50,-0.01029) +- (0,0.01078) (90,0.03457) +- (0,0.01192) };
