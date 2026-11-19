@@ -1,9 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 """Repeated-learning runs for Fig 3 and Tables S10-S12.
 
 20 populations of 200 people, 600 rounds; summaries are means over the last 120 rounds.
 Broad and strict sources are equally far from the mean prior on the offset scale, and
 each source run is compared with a no-source run on the same lay people.
 Results are checkpointed so a stopped run can be resumed.
+<<<<<<< HEAD
+=======
+=======
+"""Prespecified repeated-learning scenarios, including results that weaken the claims.
+
+All cases use 20 independent populations of 200 people for 600 rounds. Last-120-
+round means are finite-time summaries, not assertions of equilibrium. The source
+comparison holds distances equal on the offset scale and uses the same lay people
+in its no-source baseline. Checkpoints allow continuation without dropping cases.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 """
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor,as_completed

@@ -144,6 +144,10 @@ text=re.sub(r'(\\begin\{tabular\}\{lrrr\}.*?\\end\{tabular\})',lambda m:r'\begin
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parent))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 from sensitivity_material import supplement, NETWORK_SUPPLEMENT_FIGURE
 text += supplement()
 
@@ -175,5 +179,12 @@ for title, label, prose, labels in groups:
     parts.append('\\FloatBarrier\n\n')
 text = ''.join(parts)
 assert 'Supplementary Note' not in text and r'\subsection' not in text
+<<<<<<< HEAD
+=======
+=======
+from sensitivity_material import supplement
+text += supplement()
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 open('supp.tex','w').write(text)
 print(len(''.join(o)), len(''.join(t)))

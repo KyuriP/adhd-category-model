@@ -34,7 +34,10 @@ The full run repeats the main fits, the learning-rate profile, 40 recovery fits 
 - `reference_sensitivity.py`: refits at diagnostic references of 2.5%, 5% and 10%, and the expert-placement comparison at each reference.
 - `network_model.py`, `network_experiments.py`, `robust.py`, `netci.py`, `asymmetry_b.py`, `calibration_sensitivity.py`, `sb_sensitivity.py`, `figure_data.py`, `network_snapshot.py`: network simulations.
 - `day_effects.py`, `ai_sensitivity.py`: demographic trends and the AI-use exclusion check.
+<<<<<<< HEAD
 - `text_examples.py`: share of positive versus limiting statements in the texts participants read, a rough proxy for q.
+=======
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 - `text_coding.py`, `text_step2.py`, `threshold.py`, `asymmetry.py`: exploratory analyses, not inputs to the manuscript figures.
 - `results-original/` and `fit_start_values.json`: earlier fits, used as starting points for the optimiser.
 

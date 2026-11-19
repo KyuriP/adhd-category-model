@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 """Repeated exchange under three rules: boundary copying, and two learners that only see
 examples and labels (fixed step, and step scaled by the error). The label-only rules never
 look at the source's boundary. In 2D they update a linear classifier (w, b), normalise
 both together, then move back toward the initial angle and offset.
+<<<<<<< HEAD
+=======
+=======
+"""Repeated exchange with boundary copying and two learners that use labels alone.
+
+Uses the original network sampling scheme but gives every source condition the
+same initial people and graphs. The label-only rules never inspect source
+parameters. Two-dimensional rules update a linear classifier (w,b), normalise w
+and b together, then revert toward the initial angle and offset as in the model.
+>>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
+>>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 """
 from pathlib import Path
 import sys
