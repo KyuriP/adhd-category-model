@@ -47,6 +47,7 @@ t.append('\\bottomrule\n\\end{tabular}\n\\end{table}\n\n')
 t.append('\\begin{figure}[htbp]\n\\centering\n\\figpred\n\\caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}\n\\label{fig:pred}\n\\end{figure}\n')
 t.append('\\begin{figure}[htbp]\n\\centering\n\\figprofile\n\\caption{Loss as a function of the learning rate, with the other parameters re-optimised at each value (Study~3, unadjusted means, 28 moments without adjacent-participant correlations). Zero learning and the largest rate examined give higher loss. This descriptive profile is not a calibrated confidence interval.}\n\\label{fig:profile}\n\\end{figure}\n')
 text = ''.join(t)
+text = text.replace(r'\section*{Supplementary Information}', r'\renewcommand{\thepage}{S\arabic{page}}\setcounter{page}{1}'+ '\n' + r'\section*{Supplementary Information}'+ '\n' + r'\noindent\textbf{Partial copying and the broadening of diagnostic categories through peer transmission}\par\smallskip\noindent Kyuri Park\par\medskip')
 text = text.replace(r'\setcounter{figure}{0}', r'\setcounter{figure}{0}'+'\n'+r'\renewcommand{\theHtable}{S\arabic{table}}\renewcommand{\theHfigure}{S\arabic{figure}}')
 import re
 text = re.sub(r'(\\begin\{tabular\}\{lccccc\}.*?\\end\{tabular\})',lambda m:r'\begingroup\small\setlength{\tabcolsep}{3.5pt}'+'\n'+m.group(1)+r'\endgroup',text,flags=re.S)
@@ -126,7 +127,7 @@ text+=r'\end{table}'+'\n'
 text+=r'''
 \begin{table}[htbp]
 \centering
-\caption{No-lineage parameter estimates on adjusted Study~3 moments. The changing-source model uses $b_L+\delta(g-2)$ for generations $g\geq2$. Generation~1 receives the diagnostic source in both models. These alternatives require different reader priors from partial copying. Parameters are conditional fits, not direct measurements of pre-reading beliefs.}
+\caption{Shared-source parameter estimates on adjusted Study~3 moments. The changing-source model uses $b_L+\delta(g-2)$ for generations $g\geq2$. Generation~1 receives the diagnostic source in both models. These alternatives require different reader priors from partial copying. Parameters are conditional fits, not direct measurements of pre-reading beliefs.}
 \label{tab:alternative}
 \begin{tabular}{lrr}
 \toprule
@@ -140,5 +141,39 @@ text+=r'\bottomrule\end{tabular}\end{table}'+'\n'
 # keep the wide table inside the margins
 text=re.sub(r'(\\begin\{tabular\}\{lrrr\}.*?\\end\{tabular\})',lambda m:r'\begingroup\small\setlength{\tabcolsep}{3.5pt}'+'\n'+m.group(1)+r'\endgroup',text,flags=re.S)
 
+from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from sensitivity_material import supplement, NETWORK_SUPPLEMENT_FIGURE
+text += supplement()
+
+# Keep all supplementary content in one flat, numbered appendix.
+blocks = list(re.finditer(r'\\begin\{(table|figure)\}\[htbp\].*?\\end\{\1\}', text, flags=re.S))
+by_label = {re.search(r'\\label\{([^}]+)\}', m.group()).group(1): m.group() for m in blocks}
+assert len(by_label) == 14
+by_label['fig:robust'] = NETWORK_SUPPLEMENT_FIGURE.strip()
+header = text[:blocks[0].start()].replace(r'\appendix', r'\appendix' + '\n' + r'\renewcommand{\thesection}{\arabic{section}}' + '\n' + r'\renewcommand{\theHsection}{supp.\arabic{section}}')
+start = text.index(r'\subsection*{Approximation to the size of the change}')
+stop = text.index(r'\begin{table}[htbp]', start)
+methods = text[start:stop]
+methods = methods.replace(r'\subsection*{Approximation to the size of the change}' + '\n', '')
+methods = methods.replace(r'\subsection*{Learning from examples and labels alone}' + '\n', '')
+methods = methods.replace('The intervals below describe', 'The intervals in the supplementary tables describe')
+groups = [
+    ('Fitting the transmission-chain data', 'sec:si_fits', '',
+     ['tab:params', 'tab:losses', 'fig:profile', 'tab:conditions', 'tab:recovery', 'tab:alternative', 'tab:reference']),
+    ('Change during repeated learning', 'sec:si_learning', methods,
+     ['fig:pred', 'tab:repeated', 'tab:steps']),
+    ('Source influence in networks', 'sec:si_networks', '',
+     ['fig:robust', 'tab:sens', 'tab:calibration', 'tab:reference_network', 'tab:source_rules']),
+]
+assert sorted(k for *_, labels in groups for k in labels) == sorted(by_label)
+parts = [header]
+for title, label, prose, labels in groups:
+    parts.append('\\section{' + title + '}\n\\label{' + label + '}\n\n' + prose)
+    parts.extend(by_label[k] + '\n\n' for k in labels)
+    parts.append('\\FloatBarrier\n\n')
+text = ''.join(parts)
+assert 'Supplementary Note' not in text and r'\subsection' not in text
 open('supp.tex','w').write(text)
 print(len(''.join(o)), len(''.join(t)))

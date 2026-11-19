@@ -33,6 +33,12 @@ py asymmetry.py
 py asymmetry_b.py
 py netci.py
 py sb_sensitivity.py
+if [ "${FAST:-0}" != "1" ]; then
+  py reference_sensitivity.py --restart --workers "${SENSITIVITY_WORKERS:-2}"
+else
+  py reference_sensitivity.py --reuse-fits --workers "${SENSITIVITY_WORKERS:-2}"
+fi
+py repeated_sensitivity.py --restart --workers "${SENSITIVITY_WORKERS:-2}"
 cd ../paper
 py make_figs.py
 py make_supp.py
