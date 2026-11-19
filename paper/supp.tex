@@ -1,8 +1,15 @@
 \clearpage
 \appendix
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theHsection}{supp.\arabic{section}}
 \renewcommand{\thetable}{S\arabic{table}}\renewcommand{\thefigure}{S\arabic{figure}}\setcounter{table}{0}\setcounter{figure}{0}
 \renewcommand{\theHtable}{S\arabic{table}}\renewcommand{\theHfigure}{S\arabic{figure}}
+\renewcommand{\thepage}{S\arabic{page}}\setcounter{page}{1}
 \section*{Supplementary Information}
+\noindent\textbf{Partial copying and the broadening of diagnostic categories through peer transmission}\par\smallskip\noindent Kyuri Park\par\medskip
+
+\section{Fitting the transmission-chain data}
+\label{sec:si_fits}
 
 \begin{table}[htbp]
 \centering
@@ -42,48 +49,12 @@ Study 3, generations 1 to 5 & 15.7 & -- & -- & 22.9 & 0.27 \\
 \end{tabular}\endgroup
 \end{table}
 
-\begin{table}[htbp]
-\centering
-\caption{Reduction in implied prevalence among lay agents (percentage points) produced by experts on 5\% of nodes of a scale-free network, at the most connected nodes / at random nodes, by reversion rate $\lambda$ and share of positive cases $q$.}
-\label{tab:sens}
-\begingroup\small\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{lccccc}
-\toprule
-$\lambda$ & $q=20\%$ & $q=35\%$ & $q=50\%$ & $q=70\%$ & $q=90\%$ \\
-\midrule
-0.02 & 8.8 / 4.2 & 9.6 / 4.1 & 9.8 / 3.7 & 9.4 / 3.1 & 7.1 / 2.0 \\
-0.05 & 6.8 / 2.6 & 7.3 / 2.6 & 7.3 / 2.4 & 6.8 / 2.0 & 5.1 / 1.4 \\
-0.1 & 5.1 / 1.7 & 5.4 / 1.7 & 5.3 / 1.6 & 4.9 / 1.4 & 3.6 / 1.0 \\
-0.2 & 3.5 / 1.0 & 3.6 / 1.0 & 3.5 / 1.0 & 3.1 / 0.9 & 2.2 / 0.7 \\
-0.4 & 1.9 / 0.5 & 1.9 / 0.5 & 1.8 / 0.5 & 1.6 / 0.5 & 1.1 / 0.4 \\
-\bottomrule
-\end{tabular}\endgroup
-\end{table}
-
-\begin{figure}[htbp]
-\centering
-\figpred
-\caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}
-\label{fig:pred}
-\end{figure}
 \begin{figure}[htbp]
 \centering
 \figprofile
 \caption{Loss as a function of the learning rate, with the other parameters re-optimised at each value (Study~3, unadjusted means, 28 moments without adjacent-participant correlations). Zero learning and the largest rate examined give higher loss. This descriptive profile is not a calibrated confidence interval.}
 \label{fig:profile}
 \end{figure}
-
-\begin{table}[htbp]
-\centering
-\caption{Mean implied prevalence for different expert placements using baseline parameters and parameters from the main chain fit. Entries are mean implied prevalence among lay agents (percent) over the last 60 of 300 rounds, averaged across 20 scale-free networks of 200 agents, with $q=0.5$ and $\lambda=0.1$.}
-\label{tab:calibration}
-\begin{tabular}{lrrrr}
-\toprule
-Parameters & No experts & 2\% at hubs & 10\% random & 5\% at hubs \\
-\midrule
-Baseline parameters & 22.32 & 19.23 & 19.77 & 17.12 \\
-Main chain fit & 22.51 & 19.32 & 19.86 & 17.16 \\
-\bottomrule\end{tabular}\end{table}
 
 \begin{table}[htbp]
 \centering
@@ -118,7 +89,7 @@ When partial copying generated the data, refitting it gave $\eta$ from 0.20 to 0
 
 \begin{table}[htbp]
 \centering
-\caption{No-lineage parameter estimates on adjusted Study~3 moments. The changing-source model uses $b_L+\delta(g-2)$ for generations $g\geq2$. Generation~1 receives the diagnostic source in both models. These alternatives require different reader priors from partial copying. Parameters are conditional fits, not direct measurements of pre-reading beliefs.}
+\caption{Shared-source parameter estimates on adjusted Study~3 moments. The changing-source model uses $b_L+\delta(g-2)$ for generations $g\geq2$. Generation~1 receives the diagnostic source in both models. These alternatives require different reader priors from partial copying. Parameters are conditional fits, not direct measurements of pre-reading beliefs.}
 \label{tab:alternative}
 \begin{tabular}{lrr}
 \toprule
@@ -134,3 +105,189 @@ Self-rating offset $c_s$ & -0.237 & -0.268 \\
 Initial lay source offset $b_L$ & 1.345 & 1.453 \\
 Source change per generation $\delta$ & -- & -0.049 \\
 \bottomrule\end{tabular}\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Refitting at different diagnostic references. Each fit uses the same adjusted Study~3 targets and a 60-iteration differential-evolution search. The 5\% rows reproduce the main fits. The simulation check averages losses over three independent seeds with 20,000 chains each. Prior breadth is prevalence at the mean prior offset. Losses are descriptive and do not penalise the changing-source model\textquotesingle s two extra parameters. No fit reached the convergence tolerance within the stated search budget.}
+\label{tab:reference}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrr}
+\toprule
+Reference (\%) & Model & Fit loss & Check loss & Prior (\%) & $\eta$ \\
+\midrule
+2.5 & Copying & 35.05 & 33.74 & 20.42 & 0.160 \\
+2.5 & Changing source & 30.85 & 33.42 & 63.87 & 0.428 \\
+5 & Copying & 32.89 & 32.57 & 20.24 & 0.306 \\
+5 & Changing source & 27.78 & 29.37 & 72.59 & 0.554 \\
+10 & Copying & 29.71 & 29.44 & 20.18 & 0.587 \\
+10 & Changing source & 30.00 & 29.23 & 74.19 & 0.783 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\FloatBarrier
+
+\section{Change during repeated learning}
+\label{sec:si_learning}
+
+For aligned boundaries with small offset differences and negligible change within a reading, the expected change in mean offset over one round is
+\[
+n\eta s_b^2\varphi(b)\frac{\pi-q}{\pi(1-\pi)},
+\]
+where $n$ is the number of examples, $s_b$ the spread of offsets and $\varphi$ the standard normal density. The expression correlates at 0.97 with the simulated shifts across the 64 settings, but overstates their size about fourfold. Corrections during a reading reduce the gap between reader and source and hence the chance of later corrections. Finite heterogeneity and orientation differences also lie outside the approximation. A deterministic mean-update approximation averaged over pairs of aligned boundaries gives correlation 0.999 and regression slope 0.91 (Supplementary Figure~\ref{fig:pred}). It is not an exact expectation of the sequential stochastic process.
+
+Let the label $y\in\{-1,+1\}$ indicate whether the source classifies a case $x$ as having the condition. A learner uses the score $z=w^\top x-b$ and updates only if its classification disagrees with $y$. The fixed-step learner updates the unnormalised classifier by
+\[
+w' = w+\alpha yx,\qquad b'=b-\alpha y.
+\]
+The error-scaled learner moves part of the way towards a classifier that places the current example on its boundary,
+\[
+c=\frac{\eta z}{1+\lVert x\rVert^2},\qquad w'=w-cx,\qquad b'=b+c.
+\]
+It then has unnormalised score $(1-\eta)z$ for that example. Both learners divide $w'$ and $b'$ by $\lVert w'\rVert$ to express the classifier as a unit normal and an offset. This rescaling does not change classifications. Neither rule uses the source's offset or orientation. After each reading, the angle and offset return a fraction $\lambda$ towards their initial values, with the shortest angular difference used for the return.
+
+For the aligned threshold checks, orientation stays fixed. The fixed-step learner lowers $b$ by $\alpha$ after a missed positive and raises it after a false positive. The example-directed threshold learner moves $b$ a fraction $\eta$ towards the example's projection on the common normal. The two-dimensional error-scaled update above extends this correction to both weights and offset. These are explicitly different implementations in the two orientation settings.
+
+The main repeated-learning comparisons use $\alpha=0.05$ and $\eta=0.28$. Further checks halve or double these rates. They are not calibrated to equal learning speed, so differences in effect size should not be interpreted as measured differences between human learning strategies. The direction checks test narrowing at $q=0.05$ and broadening at $q=0.5$ and $0.9$. The additional $q=0.2$ setting lies close to the initial category breadth and is not assumed to be an exact balance point.
+
+All planned cases are reported. Twenty independent populations are simulated per case. Averages over rounds 481 to 600 are finite-time summaries. The software includes every population's outcome summary, trajectories sampled every 20 rounds and the difference from rounds 361 to 480. In source comparisons, the no-source baseline excludes the same people who are fixed sources in the comparison condition. This prevents changes in the set of lay agents from entering the estimated source effect. The intervals in the supplementary tables describe between-population variation at fixed parameters, rather than uncertainty about the model or empirical effects.
+
+\begin{figure}[htbp]
+\centering
+\figpred
+\caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}
+\label{fig:pred}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Repeated exchange across learning rules, orientation settings and return rates. Entries are changes in mean implied prevalence from the initial population, in percentage points. Positive values indicate broadening. Each entry averages 20 fully connected populations of 200 agents over rounds 481 to 600. The initial mean implied prevalence is approximately 21\%. These are finite-time outcomes, not equilibrium estimates.}
+\label{tab:repeated}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+Orientation & Rule & $\lambda$ & $q=0.05$ & $q=0.2$ & $q=0.5$ & $q=0.9$ \\
+\midrule
+Aligned & Copying & 0 & -7.09 & -1.57 & 4.40 & 15.88 \\
+Aligned & Copying & 0.02 & -4.80 & -1.12 & 2.86 & 9.13 \\
+Aligned & Copying & 0.1 & -3.37 & -1.02 & 1.75 & 5.66 \\
+Aligned & Fixed step & 0 & -13.61 & -1.40 & 26.31 & 62.20 \\
+Aligned & Fixed step & 0.02 & -5.63 & -1.13 & 5.18 & 13.63 \\
+Aligned & Fixed step & 0.1 & -3.06 & -0.97 & 2.26 & 6.33 \\
+Aligned & Scaled by error & 0 & -6.32 & -1.21 & 4.22 & 14.51 \\
+Aligned & Scaled by error & 0.02 & -4.19 & -1.01 & 2.58 & 8.04 \\
+Aligned & Scaled by error & 0.1 & -2.58 & -0.80 & 1.52 & 4.61 \\
+Two traits & Copying & 0 & -6.72 & -1.48 & 3.89 & 14.14 \\
+Two traits & Copying & 0.02 & -4.59 & -1.14 & 2.58 & 8.33 \\
+Two traits & Copying & 0.1 & -3.26 & -1.05 & 1.54 & 5.06 \\
+Two traits & Fixed step & 0 & -16.92 & -2.18 & 28.98 & 70.45 \\
+Two traits & Fixed step & 0.02 & -11.35 & -1.61 & 9.69 & 21.94 \\
+Two traits & Fixed step & 0.1 & -5.90 & -1.31 & 4.14 & 9.82 \\
+Two traits & Scaled by error & 0 & -9.71 & -1.07 & 7.05 & 18.63 \\
+Two traits & Scaled by error & 0.02 & -5.67 & -0.96 & 4.00 & 10.45 \\
+Two traits & Scaled by error & 0.1 & -3.19 & -0.72 & 2.37 & 5.97 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Sensitivity to the strength of label-only learning. The first three outcome columns give change in implied prevalence (percentage points) in fully connected populations. The last gives broad minus strict source influence at hubs at $q=0.5$ on scale-free networks, in offset units with a paired 95\% interval. All settings use two traits, $\lambda=0.1$, 20 populations and rounds 481 to 600. Strength is $\alpha$ for fixed-step learning and $\eta$ for error-scaled learning.}
+\label{tab:steps}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrl}
+\toprule
+Rule & Strength & $q=0.05$ & $q=0.5$ & $q=0.9$ & Broad minus strict at hubs \\
+\midrule
+Fixed step & 0.025 & -4.02 & 2.89 & 6.98 & -0.000 (-0.009, 0.008) \\
+Fixed step & 0.05 & -5.90 & 4.14 & 9.82 & -0.010 (-0.021, 0.000) \\
+Fixed step & 0.1 & -8.96 & 6.52 & 14.95 & -0.056 (-0.068, -0.044) \\
+Scaled by error & 0.14 & -2.20 & 1.77 & 4.39 & 0.049 (0.042, 0.056) \\
+Scaled by error & 0.28 & -3.19 & 2.37 & 5.97 & 0.053 (0.044, 0.062) \\
+Scaled by error & 0.56 & -4.34 & 3.03 & 7.76 & 0.047 (0.036, 0.058) \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\FloatBarrier
+
+\section{Source influence in networks}
+\label{sec:si_networks}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.92\textwidth}{!}{\figrobust}
+\caption{Expert placement and source influence under partial copying, with experts on 5\% of nodes. (a) Reduction in implied prevalence among lay agents produced by experts at the hubs, divided by the reduction produced by the same number at random positions, for different shares of positive examples $q$ and rates of return towards initial views $\lambda$, which the chain data cannot identify (scale-free network, 200 agents). (b) Reduction with experts at random positions (grey) and at the hubs (blue) for scale-free networks of different sizes, a scale-free network with clustering, and a modular network in which agents have similar numbers of connections. (c) Shift in mean lay offset relative to a no-source condition, measured after round 300, for strict sources (left) and broad sources (right) on 5\% of nodes. Source offsets are equally distant from the mean prior offset. Lines are 95\% intervals for the mean across 40 networks, with $\lambda=0.1$. Numbers give the broadening-to-narrowing ratio.}
+\label{fig:robust}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{Reduction in implied prevalence among lay agents (percentage points) produced by experts on 5\% of nodes of a scale-free network, at the most connected nodes / at random nodes, by reversion rate $\lambda$ and share of positive cases $q$.}
+\label{tab:sens}
+\begingroup\small\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lccccc}
+\toprule
+$\lambda$ & $q=20\%$ & $q=35\%$ & $q=50\%$ & $q=70\%$ & $q=90\%$ \\
+\midrule
+0.02 & 8.8 / 4.2 & 9.6 / 4.1 & 9.8 / 3.7 & 9.4 / 3.1 & 7.1 / 2.0 \\
+0.05 & 6.8 / 2.6 & 7.3 / 2.6 & 7.3 / 2.4 & 6.8 / 2.0 & 5.1 / 1.4 \\
+0.1 & 5.1 / 1.7 & 5.4 / 1.7 & 5.3 / 1.6 & 4.9 / 1.4 & 3.6 / 1.0 \\
+0.2 & 3.5 / 1.0 & 3.6 / 1.0 & 3.5 / 1.0 & 3.1 / 0.9 & 2.2 / 0.7 \\
+0.4 & 1.9 / 0.5 & 1.9 / 0.5 & 1.8 / 0.5 & 1.6 / 0.5 & 1.1 / 0.4 \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Mean implied prevalence for different expert placements using baseline parameters and parameters from the main chain fit. Entries are mean implied prevalence among lay agents (percent) over the last 60 of 300 rounds, averaged across 20 scale-free networks of 200 agents, with $q=0.5$ and $\lambda=0.1$.}
+\label{tab:calibration}
+\begin{tabular}{lrrrr}
+\toprule
+Parameters & No experts & 2\% at hubs & 10\% random & 5\% at hubs \\
+\midrule
+Baseline parameters & 22.32 & 19.23 & 19.77 & 17.12 \\
+Main chain fit & 22.51 & 19.32 & 19.86 & 17.16 \\
+\bottomrule\end{tabular}\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Expert placement after refitting at each diagnostic reference. Mean implied prevalence (percent) averages the last 120 of 600 rounds in 20 scale-free networks of 200 agents, with $q=0.5$ and $\lambda=0.1$. The final column is the additional reduction from experts on 2\% of nodes at hubs compared with 10\% at random, in percentage points with a paired normal-approximation 95\% interval.}
+\label{tab:reference_network}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rrrrrr}
+\toprule
+Reference (\%) & No experts & 2\% hubs & 10\% random & 5\% hubs & Advantage \\
+\midrule
+2.5 & 22.36 & 18.99 & 19.88 & 16.91 & 0.89 (0.31, 1.48) \\
+5 & 22.58 & 19.07 & 19.96 & 16.98 & 0.89 (0.29, 1.48) \\
+10 & 22.30 & 19.65 & 20.32 & 18.06 & 0.67 (0.20, 1.15) \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Broad minus strict source influence with different learning rules. Entries are differences in the magnitude of the mean-offset shift, with paired normal-approximation 95\% intervals across 20 scale-free networks. Positive values favour broad sources and negative values favour strict sources. Sources occupy 5\% of nodes and lie equally far from the mean prior on the offset scale. All cases have differently oriented boundaries and $\lambda=0.1$, and average rounds 481 to 600.}
+\label{tab:source_rules}
+\begingroup\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrll}
+\toprule
+Rule & $q$ & Sources at hubs & Sources at random \\
+\midrule
+Copying & 0.2 & 0.022 (0.012, 0.032) & 0.002 (-0.006, 0.010) \\
+Copying & 0.5 & 0.080 (0.068, 0.093) & 0.043 (0.035, 0.052) \\
+Copying & 0.9 & 0.149 (0.130, 0.168) & 0.079 (0.067, 0.091) \\
+Fixed step & 0.2 & -0.040 (-0.050, -0.031) & -0.013 (-0.018, -0.008) \\
+Fixed step & 0.5 & -0.010 (-0.021, 0.000) & 0.006 (-0.000, 0.011) \\
+Fixed step & 0.9 & 0.035 (0.023, 0.046) & 0.019 (0.013, 0.026) \\
+Scaled by error & 0.2 & 0.026 (0.019, 0.033) & 0.006 (0.001, 0.012) \\
+Scaled by error & 0.5 & 0.053 (0.044, 0.062) & 0.019 (0.013, 0.025) \\
+Scaled by error & 0.9 & 0.085 (0.073, 0.096) & 0.030 (0.022, 0.037) \\
+\bottomrule
+\end{tabular}\endgroup
+\end{table}
+
+\FloatBarrier
+

@@ -1,0 +1,118 @@
+{
+ "2": {
+  "1": {
+   "texts": 217,
+   "sentences": 5208,
+   "pos": 434,
+   "limit": 868,
+   "any_limit": 1.0,
+   "positive_share": 0.3333333333333333
+  },
+  "2": {
+   "texts": 217,
+   "sentences": 573,
+   "pos": 300,
+   "limit": 45,
+   "any_limit": 0.16589861751152074,
+   "positive_share": 0.8695652173913043
+  },
+  "3": {
+   "texts": 217,
+   "sentences": 582,
+   "pos": 307,
+   "limit": 22,
+   "any_limit": 0.08755760368663594,
+   "positive_share": 0.9331306990881459
+  },
+  "4": {
+   "texts": 217,
+   "sentences": 572,
+   "pos": 272,
+   "limit": 12,
+   "any_limit": 0.05069124423963134,
+   "positive_share": 0.9577464788732394
+  },
+  "5": {
+   "texts": 217,
+   "sentences": 572,
+   "pos": 308,
+   "limit": 8,
+   "any_limit": 0.03686635944700461,
+   "positive_share": 0.9746835443037974
+  },
+  "6": {
+   "texts": 217,
+   "sentences": 552,
+   "pos": 277,
+   "limit": 6,
+   "any_limit": 0.027649769585253458,
+   "positive_share": 0.9787985865724381
+  },
+  "7": {
+   "texts": 217,
+   "sentences": 592,
+   "pos": 313,
+   "limit": 5,
+   "any_limit": 0.02304147465437788,
+   "positive_share": 0.9842767295597484
+  }
+ },
+ "3": {
+  "1": {
+   "texts": 220,
+   "sentences": 5280,
+   "pos": 440,
+   "limit": 880,
+   "any_limit": 1.0,
+   "positive_share": 0.3333333333333333
+  },
+  "2": {
+   "texts": 220,
+   "sentences": 917,
+   "pos": 439,
+   "limit": 103,
+   "any_limit": 0.36363636363636365,
+   "positive_share": 0.8099630996309963
+  },
+  "3": {
+   "texts": 220,
+   "sentences": 884,
+   "pos": 426,
+   "limit": 46,
+   "any_limit": 0.18181818181818182,
+   "positive_share": 0.902542372881356
+  },
+  "4": {
+   "texts": 220,
+   "sentences": 819,
+   "pos": 429,
+   "limit": 27,
+   "any_limit": 0.11818181818181818,
+   "positive_share": 0.9407894736842105
+  },
+  "5": {
+   "texts": 220,
+   "sentences": 921,
+   "pos": 444,
+   "limit": 38,
+   "any_limit": 0.1318181818181818,
+   "positive_share": 0.921161825726141
+  },
+  "6": {
+   "texts": 220,
+   "sentences": 890,
+   "pos": 438,
+   "limit": 18,
+   "any_limit": 0.07727272727272727,
+   "positive_share": 0.9605263157894737
+  },
+  "7": {
+   "texts": 220,
+   "sentences": 871,
+   "pos": 452,
+   "limit": 26,
+   "any_limit": 0.1,
+   "positive_share": 0.9456066945606695
+  }
+ }
+}
