@@ -55,7 +55,10 @@ def _examples(rng, phi_t, b_t, n, positive_only):
     return x, lab
 
 
-def simulate(p, variant="balanced", n=10, chains=4000, seed=1, generations=N_GEN):
+def simulate(p, variant="balanced", n=10, chains=4000, seed=1, generations=N_GEN,
+             diagnostic_prev=0.05):
+    if not 0 < diagnostic_prev < 1:
+        raise ValueError("diagnostic_prev must lie strictly between zero and one")
     mu_b, s_b, eta, sig_p, v, sig_r, c_s = p[:7]
     b_lay = p[7] if len(p) > 7 else 0.0
     trend = p[8] if variant == 'register_trend' else 0.0
@@ -64,7 +67,7 @@ def simulate(p, variant="balanced", n=10, chains=4000, seed=1, generations=N_GEN
     C = chains
     out = {k: np.zeros((C, generations)) for k in ("b", "V", "S", "P")}
     phi_t = np.full(C, PHI_DSM)
-    b_t = np.full(C, B_DSM)
+    b_t = np.full(C, norm.ppf(1 - diagnostic_prev))
     xV = np.array([v, v])
     for g in range(generations):
         phi = PHI_DSM + s_phi * rng.standard_normal(C)

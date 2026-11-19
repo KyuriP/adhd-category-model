@@ -47,6 +47,7 @@ t.append('\\bottomrule\n\\end{tabular}\n\\end{table}\n\n')
 t.append('\\begin{figure}[htbp]\n\\centering\n\\figpred\n\\caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}\n\\label{fig:pred}\n\\end{figure}\n')
 t.append('\\begin{figure}[htbp]\n\\centering\n\\figprofile\n\\caption{Loss as a function of the learning rate, with the other parameters re-optimised at each value (Study~3, unadjusted means, 28 moments without adjacent-participant correlations). Zero learning and the largest rate examined give higher loss. This descriptive profile is not a calibrated confidence interval.}\n\\label{fig:profile}\n\\end{figure}\n')
 text = ''.join(t)
+text = text.replace(r'\section*{Supplementary Information}', r'\renewcommand{\thepage}{S\arabic{page}}\setcounter{page}{1}'+ '\n' + r'\section*{Supplementary Information}'+ '\n' + r'\noindent\textbf{Partial copying and the broadening of diagnostic categories through peer transmission}\par\smallskip\noindent Kyuri Park\par\medskip')
 text = text.replace(r'\setcounter{figure}{0}', r'\setcounter{figure}{0}'+'\n'+r'\renewcommand{\theHtable}{S\arabic{table}}\renewcommand{\theHfigure}{S\arabic{figure}}')
 import re
 text = re.sub(r'(\\begin\{tabular\}\{lccccc\}.*?\\end\{tabular\})',lambda m:r'\begingroup\small\setlength{\tabcolsep}{3.5pt}'+'\n'+m.group(1)+r'\endgroup',text,flags=re.S)
@@ -140,5 +141,10 @@ text+=r'\bottomrule\end{tabular}\end{table}'+'\n'
 # keep the wide table inside the margins
 text=re.sub(r'(\\begin\{tabular\}\{lrrr\}.*?\\end\{tabular\})',lambda m:r'\begingroup\small\setlength{\tabcolsep}{3.5pt}'+'\n'+m.group(1)+r'\endgroup',text,flags=re.S)
 
+from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from sensitivity_material import supplement
+text += supplement()
 open('supp.tex','w').write(text)
 print(len(''.join(o)), len(''.join(t)))

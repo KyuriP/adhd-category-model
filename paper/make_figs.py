@@ -85,7 +85,7 @@ o.append(f'\\node[font={SF},fill=white,fill opacity=0.85,text opacity=1,inner se
 E = D['equil']; qx = [100 * q for q in E['q']]
 o.append(f'\\nextgroupplot[{head("c", "Repeated exchange, no experts")},xlabel={{Positive share of examples $q$ (\\%)}},ylabel={{Implied prevalence (\\%)}},xmin=0,xmax=95,ymin=14,ymax=31]\n')
 o.append(f'\\addplot[black!45,densely dotted] coordinates {{(0,{100 * E["prior"]:.3g}) (95,{100 * E["prior"]:.3g})}};\n\\addplot[cA!55,mark=*,mark size=1.3pt] coordinates {{{co(qx, [100 * x for x in E["0.1"]])}}};\n\\addplot[cA,mark=*,mark size=1.3pt] coordinates {{{co(qx, [100 * x for x in E["0.02"]])}}};\n')
-o.append(lab(92, 100 * E['0.02'][-1], '$\\lambda=0.02$', 'cA') + lab(92, 100 * E['0.1'][-1], '$\\lambda=0.1$', 'cA!70') + lab(2, 100 * E['prior'] + 0.2, 'lay prior', 'black!60', anchor='south west'))
+o.append(lab(92, 100 * E['0.02'][-1], '$\\lambda=0.02$', 'cA') + lab(92, 100 * E['0.1'][-1], '$\\lambda=0.1$', 'cA!70') + lab(2, 100 * E['prior'] + 0.2, 'initial views', 'black!60', anchor='south west'))
 o.append('\\end{groupplot}\n\\end{tikzpicture}}\n\n')
 
 # chain figure: distributions by generation + data against simulated experiments
@@ -102,7 +102,7 @@ for gg in range(6, -1, -1):   # generation 7 at top, drawn first; lower ridges o
 o.append(ridge(0, RG['prior'], 'black!12', 'black!55'))
 lp = 100 * float(np.median(1 - norm.cdf(ch['params']['mu_b'] + ch['params']['s_b'] * np.random.default_rng(1).standard_normal(4000))))
 o.append(f'\\draw[black,line width=0.7pt] (axis cs:5,-0.3) -- (axis cs:5,9.1);\n\\draw[black!60,dashed,line width=0.6pt] (axis cs:{lp:.1f},-0.3) -- (axis cs:{lp:.1f},9.1);\n')
-o.append(lab(5, 9.1, 'criteria', anchor='south') + lab(lp, 9.1, 'lay prior', 'black!65', anchor='south'))
+o.append(lab(5, 9.1, 'criteria', anchor='south') + lab(lp, 9.1, 'initial views', 'black!65', anchor='south'))
 for k, (letter, ttl, yl, sc_) in {'V': ('b', 'Vincent judged to have ADHD', 'Participants (\\%)', 100), 'S': ('c', 'Participants who think they have ADHD', 'Participants (\\%)', 100), 'P': ('d', 'Estimated prevalence of ADHD', 'Estimate (\\%, logit scale)', 1)}.items():
     B = FD['band'][k]; ob, lo, hi = data_series(k, sc_)
     lo = min(lo, min(B['5']) * sc_, min(trend['pred'][k+'_mean'])*sc_); hi = max(hi, max(B['95']) * sc_, max(trend['pred'][k+'_mean'])*sc_); pad = 0.06 * (hi - lo)
@@ -147,7 +147,7 @@ o.append('\\newcommand{\\fignet}{%\n\\begin{tikzpicture}[font=\\sffamily\\footno
 for k, (pl, letter, ttl) in enumerate((('hubs', 'a', 'Experts at the hubs'), ('random', 'b', 'Experts at random'))):
     o.append(f'\\begin{{scope}}[xshift={k * 6.4:.1f}cm]\n\\begin{{scope}}[black!20,line width=0.25pt]\\netedges\\end{{scope}}\n{nodes(pl)}\n'
              f'\\node[anchor=south west,inner sep=0pt] at (0,5.3) {{\\textbf{{{letter}}}\\hspace{{0.6em}}{ttl}}};\n'
-             f'\\node[font={SF},anchor=south west,inner sep=0pt,text=black!65] at (0,4.92) {{lay agents settle at {100 * NS[pl]["mean"]:.0f}\\%}};\n\\end{{scope}}\n')
+             f'\\node[font={SF},anchor=south west,inner sep=0pt,text=black!65] at (0,4.92) {{mean category breadth {100 * NS[pl]["mean"]:.0f}\\%}};\n\\end{{scope}}\n')
 o.append(f'\\shade[left color=cA!10!white,right color=cA!55!black] (0.6,-0.6) rectangle (3.2,-0.48);\n\\node[font={SF},anchor=east] at (0.55,-0.54) {{{100 * LO:.0f}\\%}};\\node[font={SF},anchor=west] at (3.25,-0.54) {{{100 * HI:.0f}\\%}};\n'
          f'\\node[font={SF},anchor=west,text=black!65] at (4.0,-0.54) {{share of people a lay agent counts as having ADHD}};\n'
          f'\\filldraw[fill=cB,draw=white] (0.72,-1.0) circle (2.6pt);\\node[font={SF},anchor=west] at (0.85,-1.0) {{expert (5\\% of agents)}};\n'
@@ -163,7 +163,7 @@ o.append(lab(5.0, 100 * d['random'][4] - 0.35, 'at random', 'black!70', anchor='
 h2, r10 = 100 * d['hubs'][1], 100 * d['random'][3]
 o.append(f'\\draw[black!70,line width=0.5pt,-latex] (axis cs:2.12,{h2:.2f}) -- (axis cs:3.85,{h2:.2f});\n'
          f'\\draw[black!40,line width=0.4pt,densely dotted] (axis cs:4,{h2:.2f}) -- (axis cs:4,{r10:.2f});\n'
-         + lab(0.75, 12.4, 'arrow: 2\\% at the hubs\\\\beat 10\\% at random', 'black!70', anchor='south west', extra=',align=left'))
+         + lab(0.75, 12.4, '2\\% at hubs have more effect\\\\than 10\\% at random', 'black!70', anchor='south west', extra=',align=left'))
 o.append('\\end{axis}\n')
 o.append(f'\\begin{{axis}}[pub,at={{(7.6cm,-2.6cm)}},anchor=north west,width=6.4cm,height=5.6cm,{head("d", "Influence stays close to the expert")},xlabel={{Steps to the nearest expert}},ylabel={{Implied prevalence, each lay agent (\\%)}},xmin=0.4,xmax=4.6,ymin=5,ymax=40,xtick={{1,2,3,4}},xticklabels={{1,2,3,$\\geq$4}}]\n')
 o.append(f'\\draw[black!45,densely dotted,line width=0.6pt] (axis cs:0.4,{100 * LC["none"]:.2f}) -- (axis cs:4.6,{100 * LC["none"]:.2f});\n')
@@ -234,5 +234,21 @@ e = [r['eta'] for r in P]; L = np.array([r['loss'] for r in P]); L = L - L.min()
 o.append('\\newcommand{\\figprofile}{%\n\\begin{tikzpicture}[font=\\sffamily\\footnotesize]\n\\begin{axis}[pub,width=7cm,height=5.2cm,xlabel={Learning rate $\\eta$},ylabel={Loss above the best fit},ymin=0,ymax=70,xmin=-0.02,xmax=0.83]\n'
          + f'\\addplot[cA,mark=*,mark size=1.3pt] coordinates {{{co(e, L)}}};\n' + '\\end{axis}\n\\end{tikzpicture}}\n')
 part2 = ''.join(o).replace('ymax=70', f'ymax={max(10, float(L.max()) * 1.15):.2f}')
-open('figures.tex', 'w').write(part1 + part2 + CONCEPT)
+# Derive the conceptual chain bars from the current fit rather than an earlier calibration.
+from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
+from chain_model import simulate
+cp=json.load(open(R+'fit_s3adj_balanced_lag.json'))['params']
+cs=simulate([cp[k] for k in ('mu_b','s_b','eta','sig_p','v','sig_r','c_s')],chains=40000,seed=11)
+means=(1-norm.cdf(cs['b'])).mean(axis=0)
+old_bars='0/1.1/0.10/5,1/3.6/0.31/15,2/6.1/0.39/19,3/8.6/0.42/21,4/11.1/0.43/21,5/13.6/0.43/21'
+new_bars='0/1.1/0.10/5,'+','.join(f'{i}/{1.1+2.5*i:.1f}/{2*v:.5f}/{100*v:.0f}' for i,v in enumerate(means[:5],1))
+assert old_bars in CONCEPT
+CONCEPT=CONCEPT.replace(old_bars,new_bars)
+from pathlib import Path
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from sensitivity_material import figures as sensitivity_figures
+open('figures.tex', 'w').write(part1 + part2 + CONCEPT + sensitivity_figures())
 print('figures.tex', len(part1 + part2 + CONCEPT))
