@@ -40,14 +40,14 @@ for dsn,name in (('3adj','Study 3, adjusted means'),('3','Study 3, unadjusted me
         except FileNotFoundError: cells.append('--')
     t.append(f'{name} & '+' & '.join(cells)+f' & {L(dsn,"balanced")["params"]["eta"]:.2f} \\\\\n')
 t.append('\\bottomrule\n\\end{tabular}\n\\end{table}\n\n')
-t.append('\\begin{table}[htbp]\n\\centering\n\\caption{Reduction in implied prevalence among lay agents (percentage points) produced by experts on 5\\% of nodes of a scale-free network, at the most connected nodes / at random nodes, by reversion rate $\\lambda$ and share of positive cases $q$.}\n\\label{tab:sens}\n\\begin{tabular}{l'+'c'*len(S['q'])+'}\n\\toprule\n$\\lambda$ & '+' & '.join(f'$q={100*q:.0f}\\%$' for q in S['q'])+' \\\\\n\\midrule\n')
+t.append('\\begin{table}[htbp]\n\\centering\n\\caption{Reduction in implied prevalence among lay agents (percentage points) produced by experts on 5\\% of nodes of a scale-free network, at the most connected nodes / at random nodes, by return rate $\\lambda$ and share of positive cases $q$.}\n\\label{tab:sens}\n\\begin{tabular}{l'+'c'*len(S['q'])+'}\n\\toprule\n$\\lambda$ & '+' & '.join(f'$q={100*q:.0f}\\%$' for q in S['q'])+' \\\\\n\\midrule\n')
 for i,lam in enumerate(S['lam']):
     t.append(f'{lam:g} & '+' & '.join(f'{100*(none-hub)[i,j]:.1f} / {100*(none-rnd)[i,j]:.1f}' for j in range(len(S['q'])))+' \\\\\n')
 t.append('\\bottomrule\n\\end{tabular}\n\\end{table}\n\n')
 t.append('\\begin{figure}[htbp]\n\\centering\n\\figpred\n\\caption{Predicting the size of the drift. Each point is one combination of category prevalence and positive share from Figure~\\ref{fig:drift}b. The closed-form expression for small differences between agents matches the sign away from $\\pi=q$ and closely tracks the ordering but overstates the shift. A deterministic mean-update approximation averaged over aligned boundary pairs tracks the simulation closely. It is not the exact expectation of the nonlinear sequential process.}\n\\label{fig:pred}\n\\end{figure}\n')
 t.append('\\begin{figure}[htbp]\n\\centering\n\\figprofile\n\\caption{Loss as a function of the learning rate, with the other parameters re-optimised at each value (Study~3, unadjusted means, 28 moments without adjacent-participant correlations). Zero learning and the largest rate examined give higher loss. This descriptive profile is not a calibrated confidence interval.}\n\\label{fig:profile}\n\\end{figure}\n')
 text = ''.join(t)
-text = text.replace(r'\section*{Supplementary Information}', r'\renewcommand{\thepage}{S\arabic{page}}\setcounter{page}{1}'+ '\n' + r'\section*{Supplementary Information}'+ '\n' + r'\noindent\textbf{Partial copying and the broadening of diagnostic categories through peer transmission}\par\smallskip\noindent Kyuri Park\par\medskip')
+text = text.replace(r'\section*{Supplementary Information}', r'\renewcommand{\thepage}{S\arabic{page}}\setcounter{page}{1}'+ '\n' + r'\section*{Supplementary Information}'+ '\n' + r'\noindent\textbf{When do categories creep? A computational model of social learning, applied to ADHD}\par\smallskip\noindent Kyuri Park and Tanay Katiyar\par\medskip')
 text = text.replace(r'\setcounter{figure}{0}', r'\setcounter{figure}{0}'+'\n'+r'\renewcommand{\theHtable}{S\arabic{table}}\renewcommand{\theHfigure}{S\arabic{figure}}')
 import re
 text = re.sub(r'(\\begin\{tabular\}\{lccccc\}.*?\\end\{tabular\})',lambda m:r'\begingroup\small\setlength{\tabcolsep}{3.5pt}'+'\n'+m.group(1)+r'\endgroup',text,flags=re.S)
@@ -144,10 +144,6 @@ text=re.sub(r'(\\begin\{tabular\}\{lrrr\}.*?\\end\{tabular\})',lambda m:r'\begin
 from pathlib import Path
 import sys
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 from sensitivity_material import supplement, NETWORK_SUPPLEMENT_FIGURE
 text += supplement()
 
@@ -179,12 +175,5 @@ for title, label, prose, labels in groups:
     parts.append('\\FloatBarrier\n\n')
 text = ''.join(parts)
 assert 'Supplementary Note' not in text and r'\subsection' not in text
-<<<<<<< HEAD
-=======
-=======
-from sensitivity_material import supplement
-text += supplement()
->>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
->>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
-open('supp.tex','w').write(text)
+open('supp.tex','w').write(text.rstrip('\n') + '\n')
 print(len(''.join(o)), len(''.join(t)))

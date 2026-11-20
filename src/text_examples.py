@@ -1,4 +1,5 @@
-"""Share of positive statements in the texts read in Studies 2 and 3 (a rough proxy for q).
+"""Exploratory coding of the texts read in Studies 2 and 3: positive versus limiting statements.
+The counts describe the texts; they are not an estimate of q and are not used in any fit.
 
 Each text is split into sentences. A sentence that says who does not have ADHD, or states a
 condition for diagnosis, counts as limiting; otherwise a sentence describing people with ADHD

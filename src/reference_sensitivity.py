@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 """Refit the chain models at diagnostic references of 2.5%, 5% and 10%,
 and rerun the expert-placement comparison at each reference.
 Same targets, bounds and search budget as the main fits; failed fits are kept in the output.
-=======
-<<<<<<< HEAD
-"""Refit the chain models at diagnostic references of 2.5%, 5% and 10%,
-and rerun the expert-placement comparison at each reference.
-Same targets, bounds and search budget as the main fits; failed fits are kept in the output.
-=======
-"""Refit the chain models and expert-placement contrast at 2.5%, 5% and 10% references.
-
-These are model-reference scenarios, not estimates of diagnostic prevalence.
-The 5% fits are the manuscript fits. Other scenarios use the same target moments,
-bounds, search budget and initial fitted parameters. Results retain all fit losses,
-parameters and independent simulation checks, including optimizer failures.
->>>>>>> 20bc25dc208597d275872f1132daa9fbab6be5c8
->>>>>>> e0be0d0288f614a42c68d8d84b30840184505552
 """
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
